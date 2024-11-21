@@ -21,7 +21,12 @@ const Proyectos = () => {
   };
 
   return (
-    <div className="pt-20 bg-white">
+    <div className="pt-20" style={{ 
+      backgroundImage: 'url("https://cdn.prod.website-files.com/6692e58c594a499f40445212/66e04030ac7b06c88d6d7b31_Bakers%20place_final_mews_2023-02-23%20edit-small-xs.jpg")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
       <section className="py-16">
         <div className="container mx-auto px-8">
           <h1 className="text-4xl font-light mb-8">¿Qué esperar de tu futura vivienda?</h1>

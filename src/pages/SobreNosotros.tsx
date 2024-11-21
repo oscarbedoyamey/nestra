@@ -57,30 +57,37 @@ const SobreNosotros = () => {
       </section>
 
       {/* Our Pillars Section */}
-      <section id="filosofia" className="py-32 bg-white">
-        <div className="container mx-auto px-8">
-          <h1 className="text-4xl font-light mb-20">Nuestros pilares</h1>
+      <section 
+        id="filosofia" 
+        className="py-32 bg-cover bg-center relative"
+        style={{
+          backgroundImage: "url('https://cdn.prod.website-files.com/6692e58c594a499f40445212/66ab8c6fdad745166b7e71fd_AdobeStock_303841680_sm.jpg')"
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="container mx-auto px-8 relative z-10">
+          <h1 className="text-4xl font-light mb-20 text-white">Nuestros pilares</h1>
           
           <div className="grid md:grid-cols-2 gap-20">
             <div className="fade-in">
-              <h2 className="text-2xl font-light mb-8">Justicia Social</h2>
+              <h2 className="text-2xl font-light mb-8 text-white">Justicia Social</h2>
               <div className="space-y-6">
-                <p className="text-gray-500">
+                <p className="text-gray-200">
                   Nuestro objetivo es evitar cualquier especulación o sobrecoste innecesario, asegurando que el comprador pague el precio lo más asequible posible por su vivienda, aplicando así la máxima transparencia posible a todas las partes en todo el proceso.
                 </p>
-                <p className="text-gray-500">
+                <p className="text-gray-200">
                   Esta transparencia no solo fomenta relaciones de confianza, sino que también nos permite centrarnos en nuestra misión: ofrecer acceso a vivienda al más precio justo, sin comprometer la calidad ni la sostenibilidad, al mayor número de personas posible.
                 </p>
               </div>
             </div>
             
             <div className="fade-in" style={{ animationDelay: "0.2s" }}>
-              <h2 className="text-2xl font-light mb-8">Justicia Medioambiental</h2>
+              <h2 className="text-2xl font-light mb-8 text-white">Justicia Medioambiental</h2>
               <div className="space-y-6">
-                <p className="text-gray-500">
+                <p className="text-gray-200">
                   Más allá de garantizar un precio asequible, nos esforzamos por aplicar procesos y utilizar materiales innovadores que minimicen el impacto ambiental. Dentro de unos límites de coste razonables, optimizamos cada etapa de la construcción para reducir el consumo energético, las emisiones de CO₂ y el uso de recursos naturales.
                 </p>
-                <p className="text-gray-500">
+                <p className="text-gray-200">
                   Nuestro compromiso no termina con la construcción; diseñamos viviendas que, en su uso diario, sean sostenibles y eficientes, contribuyendo a un futuro más limpio y responsable. Así, no solo construimos viviendas para las personas, sino también para el planeta.
                 </p>
               </div>
@@ -89,11 +96,10 @@ const SobreNosotros = () => {
         </div>
       </section>
 
-      {/* Context Section */}
+      {/* Contact Form Section */}
       <section 
         id="contacto" 
         className="py-32 relative"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&q=80")' }}
       >
         <div className="absolute inset-0 bg-[#F3F4F5]/95" />
         <div className="container mx-auto px-8 max-w-2xl relative z-10">

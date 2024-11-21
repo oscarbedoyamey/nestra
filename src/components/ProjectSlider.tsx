@@ -15,12 +15,15 @@ interface ProjectSliderProps {
 const ProjectSlider = ({ images }: ProjectSliderProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [autoplay, setAutoplay] = useState(true);
 
   useEffect(() => {
     if (!emblaApi) return;
 
     const interval = setInterval(() => {
-      emblaApi.scrollNext();
+      if (autoplay) {
+        emblaApi.scrollNext();
+      }
     }, 2000);
 
     const onSelect = () => {
@@ -33,14 +36,14 @@ const ProjectSlider = ({ images }: ProjectSliderProps) => {
       clearInterval(interval);
       emblaApi.off("select", onSelect);
     };
-  }, [emblaApi]);
+  }, [emblaApi, autoplay]);
 
   return (
     <Carousel 
       ref={emblaRef}
       className="w-full max-w-5xl mx-auto"
-      onMouseEnter={() => emblaApi?.stop()}
-      onMouseLeave={() => emblaApi?.start()}
+      onMouseEnter={() => setAutoplay(false)}
+      onMouseLeave={() => setAutoplay(true)}
     >
       <CarouselContent>
         {images.map((image, index) => (

@@ -33,7 +33,7 @@ const Index = () => {
             <h2 className="text-2xl font-light">
               Dinos dónde y cómo la quieres
             </h2>
-            <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-none px-8">
+            <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-full font-bold">
               Crea tu vivienda
             </Button>
           </div>
@@ -97,7 +97,7 @@ const Index = () => {
           <h1 className="text-4xl font-light mb-8 text-[#F3F4F5]">
             Construimos la vivienda que estás buscando
           </h1>
-          <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-none px-8">
+          <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-full font-bold">
             Empezar
           </Button>
         </div>
@@ -133,7 +133,7 @@ const Index = () => {
               <label className="block text-sm mb-2">Pregunta o dudas</label>
               <Textarea required className="min-h-[150px] rounded-none border-[#282D15]" />
             </div>
-            <Button type="submit" className="w-full bg-[#282D15] hover:bg-[#282D15]/90 text-[#F3F4F5] rounded-none">
+            <Button type="submit" className="w-full bg-[#282D15] hover:bg-[#282D15]/90 text-[#F3F4F5] rounded-full font-bold">
               Enviar mensaje
             </Button>
           </form>

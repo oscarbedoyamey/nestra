@@ -1,5 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Navigation = () => {
   const location = useLocation();
@@ -23,12 +31,42 @@ const Navigation = () => {
           >
             ¿Cómo funciona?
           </button>
-          <Link 
-            to="/sobre-nosotros"
-            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
-          >
-            Sobre nosotros
-          </Link>
+          
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors">
+                  Sobre nosotros
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[200px] gap-3 p-4">
+                    <Link 
+                      to="/sobre-nosotros#equipo"
+                      className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors block p-2"
+                      onClick={() => setTimeout(() => scrollToSection("equipo"), 100)}
+                    >
+                      Equipo
+                    </Link>
+                    <Link 
+                      to="/sobre-nosotros#por-que"
+                      className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors block p-2"
+                      onClick={() => setTimeout(() => scrollToSection("por-que"), 100)}
+                    >
+                      Por qué
+                    </Link>
+                    <Link 
+                      to="/sobre-nosotros#filosofia"
+                      className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors block p-2"
+                      onClick={() => setTimeout(() => scrollToSection("filosofia"), 100)}
+                    >
+                      Filosofía
+                    </Link>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
           <Link 
             to="/proyectos"
             className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"

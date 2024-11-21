@@ -71,6 +71,7 @@ const Proyectos = () => {
         </div>
       </section>
 
+      {/* Contact Form Section */}
       <section 
         id="contacto" 
         className="py-32 relative"

@@ -13,6 +13,7 @@ const SobreNosotros = () => {
     <div className="pt-20">
       {/* Team Section */}
       <section 
+        id="equipo"
         className="py-32 bg-cover bg-center relative"
         style={{
           backgroundImage: "url('https://cdn.prod.website-files.com/6692e58c594a499f40445212/66ab8c6fdad745166b7e71fd_AdobeStock_303841680_sm.jpg')"
@@ -36,7 +37,7 @@ const SobreNosotros = () => {
       </section>
 
       {/* Why We Do It Section */}
-      <section className="py-32 bg-gray-50">
+      <section id="por-que" className="py-32 bg-gray-50">
         <div className="container mx-auto px-8 max-w-4xl">
           <h1 className="text-4xl font-light mb-12">Por qué lo Hacemos</h1>
           <div className="space-y-8">
@@ -56,7 +57,7 @@ const SobreNosotros = () => {
       </section>
 
       {/* Our Pillars Section */}
-      <section className="py-32 bg-white">
+      <section id="filosofia" className="py-32 bg-white">
         <div className="container mx-auto px-8">
           <h1 className="text-4xl font-light mb-20">Nuestros pilares</h1>
           
@@ -104,21 +105,21 @@ const SobreNosotros = () => {
           <form onSubmit={handleContactSubmit} className="space-y-8">
             <div>
               <label className="block text-sm mb-2">Nombre</label>
-              <Input required className="rounded-none border-[#282D15]" />
+              <Input required className="rounded-full border-[#282D15]" />
             </div>
             <div>
               <label className="block text-sm mb-2">Teléfono</label>
-              <Input type="tel" required className="rounded-none border-[#282D15]" />
+              <Input type="tel" required className="rounded-full border-[#282D15]" />
             </div>
             <div>
               <label className="block text-sm mb-2">Email</label>
-              <Input type="email" required className="rounded-none border-[#282D15]" />
+              <Input type="email" required className="rounded-full border-[#282D15]" />
             </div>
             <div>
               <label className="block text-sm mb-2">Pregunta o dudas</label>
-              <Textarea required className="min-h-[150px] rounded-none border-[#282D15]" />
+              <Textarea required className="min-h-[150px] rounded-full border-[#282D15]" />
             </div>
-            <Button type="submit" className="w-full bg-[#282D15] hover:bg-[#282D15]/90 text-[#F3F4F5] rounded-none">
+            <Button type="submit" className="w-full bg-[#282D15] hover:bg-[#282D15]/90 text-[#F3F4F5] rounded-full font-bold">
               Enviar mensaje
             </Button>
           </form>

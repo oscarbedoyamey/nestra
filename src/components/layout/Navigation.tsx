@@ -19,37 +19,37 @@ const Navigation = () => {
         <div className="hidden md:flex items-center space-x-12">
           <button 
             onClick={() => scrollToSection("como_funciona")}
-            className="text-sm text-[#282D15]/70 hover:text-[#282D15] transition-colors"
+            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
           >
             ¿Cómo funciona?
           </button>
           <Link 
             to="/sobre-nosotros"
-            className="text-sm text-[#282D15]/70 hover:text-[#282D15] transition-colors"
+            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
           >
             Sobre nosotros
           </Link>
           <Link 
             to="/proyectos"
-            className="text-sm text-[#282D15]/70 hover:text-[#282D15] transition-colors"
+            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
           >
             Proyectos
           </Link>
           <button 
             onClick={() => scrollToSection("contacto")}
-            className="text-sm text-[#282D15]/70 hover:text-[#282D15] transition-colors"
+            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
           >
             Contacto
           </button>
           <Button 
             variant="default" 
-            className="bg-[#282D15] hover:bg-[#282D15]/90 text-[#FAFAFA] rounded-none text-sm px-6"
+            className="bg-[#282D15] hover:bg-[#282D15]/90 text-[#FAFAFA] rounded-full text-sm font-bold px-8"
           >
             Construir vivienda
           </Button>
           <Button 
             variant="outline"
-            className="border-[#282D15]/20 hover:bg-[#FAFAFA] rounded-none text-sm px-6"
+            className="border-[#282D15]/20 hover:bg-[#FAFAFA] rounded-full text-sm font-bold px-8"
           >
             Iniciar sesión
           </Button>

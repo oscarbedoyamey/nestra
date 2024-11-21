@@ -120,19 +120,19 @@ const Index = () => {
           <form onSubmit={handleContactSubmit} className="space-y-8">
             <div>
               <label className="block text-sm mb-2">Nombre</label>
-              <Input required className="rounded-none border-[#282D15]" />
+              <Input required className="rounded-[10px] border-[#282D15]" />
             </div>
             <div>
               <label className="block text-sm mb-2">Teléfono</label>
-              <Input type="tel" required className="rounded-none border-[#282D15]" />
+              <Input type="tel" required className="rounded-[10px] border-[#282D15]" />
             </div>
             <div>
               <label className="block text-sm mb-2">Email</label>
-              <Input type="email" required className="rounded-none border-[#282D15]" />
+              <Input type="email" required className="rounded-[10px] border-[#282D15]" />
             </div>
             <div>
               <label className="block text-sm mb-2">Pregunta o dudas</label>
-              <Textarea required className="min-h-[150px] border-[#282D15]" />
+              <Textarea required className="min-h-[150px] rounded-[10px] border-[#282D15]" />
             </div>
             <Button type="submit" className="w-full bg-[#282D15] hover:bg-[#282D15]/90 text-[#F3F4F5] rounded-full font-bold">
               Enviar mensaje

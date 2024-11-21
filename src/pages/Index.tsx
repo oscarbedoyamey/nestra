@@ -11,15 +11,6 @@ const Index = () => {
 
   return (
     <div className="pt-20">
-      {/* Logo Section */}
-      <section className="py-20 flex justify-center items-center">
-        <img 
-          src="https://bmconfort.es/images/nestra%20_logo_dark.png" 
-          alt="Nestra" 
-          className="w-[400px] max-w-full px-8"
-        />
-      </section>
-
       {/* Hero Section */}
       <section 
         className="min-h-[90vh] flex items-center justify-center bg-cover bg-center relative"
@@ -27,6 +18,11 @@ const Index = () => {
       >
         <div className="absolute inset-0 bg-[#282D15]/60" />
         <div className="container mx-auto px-8 text-center relative z-10 text-[#F3F4F5]">
+          <img 
+            src="https://bmconfort.es/images/nestra%20_logo_white.png" 
+            alt="Nestra" 
+            className="w-[400px] max-w-full px-8 mx-auto mb-20"
+          />
           <h1 className="text-5xl md:text-6xl font-light mb-6 tracking-tight">
             Construimos la vivienda que estás buscando
           </h1>
@@ -44,7 +40,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Como Funciona Section */}
       <section 
         id="como_funciona" 
         className="py-32 relative"

@@ -11,6 +11,15 @@ const Index = () => {
 
   return (
     <div className="pt-20">
+      {/* Logo Section */}
+      <section className="py-20 flex justify-center items-center">
+        <img 
+          src="https://bmconfort.es/images/nestra%20_logo_dark.png" 
+          alt="Nestra" 
+          className="w-[400px] max-w-full px-8"
+        />
+      </section>
+
       {/* Hero Section */}
       <section 
         className="min-h-[90vh] flex items-center justify-center bg-cover bg-center relative"

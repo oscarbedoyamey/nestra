@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import {
@@ -13,18 +13,38 @@ import {
 
 const Navigation = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
+  const scrollToSection = (sectionId: string, path?: string) => {
+    if (path && path !== location.pathname) {
+      navigate(path);
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    window.scrollTo(0, 0);
     setIsMobileMenuOpen(false);
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-[rgb(243,244,245)]/90 backdrop-blur-sm z-50 border-b border-[#282D15]/10">
       <div className="container mx-auto px-8 py-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center">
+        <Link 
+          to="/" 
+          onClick={() => handleNavigation('/')}
+          className="flex items-center"
+        >
           <img src="https://bmconfort.es/images/nestra_logo_dark.png" alt="Nestra" className="h-6" />
         </Link>
         
@@ -37,7 +57,7 @@ const Navigation = () => {
 
         <div className="hidden md:flex items-center space-x-12">
           <button 
-            onClick={() => scrollToSection("como_funciona")}
+            onClick={() => scrollToSection("como_funciona", "/")}
             className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
           >
             ¿Cómo funciona?
@@ -46,7 +66,11 @@ const Navigation = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link to="/sobre-nosotros" className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors">
+                <Link 
+                  to="/sobre-nosotros" 
+                  onClick={() => handleNavigation('/sobre-nosotros')}
+                  className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
+                >
                   <NavigationMenuTrigger className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors">
                     Sobre nosotros
                   </NavigationMenuTrigger>
@@ -82,6 +106,7 @@ const Navigation = () => {
 
           <Link 
             to="/proyectos"
+            onClick={() => handleNavigation('/proyectos')}
             className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
           >
             Proyectos
@@ -100,6 +125,7 @@ const Navigation = () => {
           </Button>
           <Link 
             to="/iniciar-sesion"
+            onClick={() => handleNavigation('/iniciar-sesion')}
           >
             <Button 
               variant="outline"
@@ -115,22 +141,22 @@ const Navigation = () => {
           <div className="absolute top-full left-0 right-0 bg-[rgb(255,255,255)] border-b border-[#282D15]/10 p-4 md:hidden">
             <div className="flex flex-col space-y-4">
               <button 
-                onClick={() => scrollToSection("como_funciona")}
+                onClick={() => scrollToSection("como_funciona", "/")}
                 className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
               >
                 ¿Cómo funciona?
               </button>
               <Link 
                 to="/sobre-nosotros"
+                onClick={() => handleNavigation('/sobre-nosotros')}
                 className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Sobre nosotros
               </Link>
               <Link 
                 to="/proyectos"
+                onClick={() => handleNavigation('/proyectos')}
                 className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Proyectos
               </Link>
@@ -148,7 +174,7 @@ const Navigation = () => {
               </Button>
               <Link 
                 to="/iniciar-sesion"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => handleNavigation('/iniciar-sesion')}
                 className="w-full"
               >
                 <Button 

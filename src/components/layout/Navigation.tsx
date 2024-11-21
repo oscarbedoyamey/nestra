@@ -54,7 +54,7 @@ const Navigation = () => {
                   </NavigationMenuTrigger>
                 </Link>
                 <NavigationMenuContent>
-                  <div className="grid w-[200px] gap-3 p-4">
+                  <div className="grid w-[200px] gap-3 p-4 bg-[rgb(255,255,255)]">
                     <Link 
                       to="/sobre-nosotros#equipo"
                       className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors block p-2"
@@ -96,7 +96,7 @@ const Navigation = () => {
           </button>
           <Button 
             variant="default" 
-            className="bg-[#282D15] hover:bg-[#282D15]/90 text-white rounded-full text-sm font-bold px-8"
+            className="bg-[#282D15] hover:bg-[#282D15]/90 text-[rgb(255,255,255)] rounded-full text-sm font-bold px-8"
           >
             Construir vivienda
           </Button>
@@ -105,7 +105,7 @@ const Navigation = () => {
           >
             <Button 
               variant="outline"
-              className="border-[#282D15]/20 hover:bg-white rounded-full text-sm font-bold px-8"
+              className="border-[#282D15]/20 hover:bg-[rgb(255,255,255)] rounded-full text-sm font-bold px-8"
             >
               Iniciar sesión
             </Button>
@@ -114,7 +114,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white border-b border-[#282D15]/10 p-4 md:hidden">
+          <div className="absolute top-full left-0 right-0 bg-[rgb(255,255,255)] border-b border-[#282D15]/10 p-4 md:hidden">
             <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection("como_funciona")}
@@ -144,7 +144,7 @@ const Navigation = () => {
               </button>
               <Button 
                 variant="default" 
-                className="bg-[#282D15] hover:bg-[#282D15]/90 text-white rounded-full text-sm font-bold px-8 w-full"
+                className="bg-[#282D15] hover:bg-[#282D15]/90 text-[rgb(255,255,255)] rounded-full text-sm font-bold px-8 w-full"
               >
                 Construir vivienda
               </Button>
@@ -155,7 +155,7 @@ const Navigation = () => {
               >
                 <Button 
                   variant="outline"
-                  className="border-[#282D15]/20 hover:bg-white rounded-full text-sm font-bold px-8 w-full"
+                  className="border-[#282D15]/20 hover:bg-[rgb(255,255,255)] rounded-full text-sm font-bold px-8 w-full"
                 >
                   Iniciar sesión
                 </Button>

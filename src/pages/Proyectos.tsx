@@ -5,16 +5,6 @@ import { toast } from "sonner";
 import useEmblaCarousel from 'embla-carousel-react';
 import { useEffect } from 'react';
 
-const images = [
-  "https://bmarq.es/wp-content/uploads/2024/04/01-malvins-bma-arquitectura.jpg",
-  "https://bmarq.es/wp-content/uploads/2024/04/01-sa-figuera-bma-arquitectura.jpg",
-  "https://bmarq.es/wp-content/uploads/2024/04/01-fvn5-bma-arquitectura.jpg",
-  "https://arquitectura-madera.com/wp-content/uploads/2023/07/01_Ext-1.jpg",
-  "https://woodea.es/wp-content/uploads/2023/04/Tomas-breton_1.jpg",
-  "https://woodea.es/wp-content/uploads/2023/04/comedor_TB.jpg",
-  "https://woodea.es/wp-content/uploads/2023/04/ZubiCities_Madreselva_General_Calle.jpg"
-];
-
 const Proyectos = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
@@ -25,57 +15,99 @@ const Proyectos = () => {
 
   useEffect(() => {
     if (emblaApi) {
-      // Optional: Add any carousel initialization logic here
+      emblaApi.on('reInit', () => {
+        emblaApi.scrollTo(0);
+      });
     }
   }, [emblaApi]);
 
   return (
     <div className="pt-20">
-      <section className="py-32 bg-white">
-        <div className="container mx-auto px-8">
-          <div className="max-w-4xl mb-20">
-            <h1 className="text-4xl font-light mb-12">¿Qué esperar de tu futura vivienda?</h1>
-            
-            <div className="space-y-8">
-              <p className="text-xl font-light text-gray-600">
-                Nos comprometemos a que cada proyecto cumpla con altos estándares de calidad y diseño, sin comprometer el coste. Apostamos por crear hogares con un diseño de vanguardia que prioriza tanto el bienestar de los residentes como el respeto por el entorno.
-              </p>
-              <p className="text-gray-500">
-                Además trabajamos directamente con constructores que además de la experiencia, tienen una filosofía muy similar a la nuestra, de aplicar transparencia, y de trabajar por reducir lo máximo posible el impacto medioambiental. Algunas de ellas son:
-              </p>
-              <ul className="space-y-2">
-                <li>
-                  <a href="https://www.011h.com/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-600 transition-colors">
-                    011h
-                  </a>
-                </li>
-                <li>
-                  <a href="https://woodea.es/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-600 transition-colors">
-                    Woodea
-                  </a>
-                </li>
-                <li>
-                  <a href="https://jithousing.com/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-600 transition-colors">
-                    JIT Housing
-                  </a>
-                </li>
-              </ul>
-            </div>
+      {/* Hero Section */}
+      <section 
+        className="min-h-[90vh] flex items-center justify-center bg-cover bg-center relative"
+        style={{ backgroundImage: 'url("https://cdn.prod.website-files.com/6692e58c594a499f4044523c/66ad091740aaf14dce93e7ea_Vanilla%20Fayetteville_0306_Cam09_PS%20(2)_sm.jpg")' }}
+      >
+        <div className="absolute inset-0 bg-[#282D15]/60" />
+        <div className="container mx-auto px-8 text-center relative z-10 text-[#F3F4F5]">
+          <h1 className="text-5xl md:text-6xl font-light mb-6 tracking-tight">
+            Construimos la vivienda que estás buscando
+          </h1>
+          <h2 className="text-2xl md:text-3xl font-light mb-12 tracking-tight">
+            Desarrollamos promociones de obra nueva que encajen con tus necesidades
+          </h2>
+          <div className="space-y-8">
+            <h2 className="text-2xl font-light">
+              Dinos dónde y cómo la quieres
+            </h2>
+            <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-none px-8">
+              Crea tu vivienda
+            </Button>
           </div>
-          
-          <div className="overflow-hidden -mx-8" ref={emblaRef}>
-            <div className="flex">
-              {images.map((image, index) => (
-                <div key={index} className="flex-[0_0_100%] min-w-0 relative px-8">
-                  <img
-                    src={image}
-                    alt={`Proyecto ${index + 1}`}
-                    className="w-full h-[80vh] object-cover"
-                  />
-                </div>
-              ))}
-            </div>
+        </div>
+      </section>
+
+      {/* Como Funciona Section */}
+      <section 
+        id="como_funciona" 
+        className="py-32 relative"
+        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80")' }}
+      >
+        <div className="absolute inset-0 bg-[#F3F4F5]/95" />
+        <div className="container mx-auto px-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-12">
+            {[
+              {
+                title: "Qué vivienda quieres",
+                description: "Danos la información de que zonas te gustaría que construyeramos una vivienda para tí, y como la querrías, sin compromiso."
+              },
+              {
+                title: "Agrupamos compradores",
+                description: "Nestra busca y agrupa personas que coinciden en donde y que tipo de vivienda quieren."
+              },
+              {
+                title: "Buscamos un proyecto",
+                description: "Nestra busca y os presenta solares donde podríamos construir esas viviendas, así como posteriormente un proyecto de las mismas."
+              },
+              {
+                title: "Reserva y personaliza",
+                description: "Una vez elegido el lugar y el proyecto llegará la hora de reservar la vivienda, que te dará derecho también a una personalización única de tu vivienda."
+              },
+              {
+                title: "Construimos",
+                description: "Nestra se encarga de que ese proyecto se promueva, y acabe siendo una realidad."
+              },
+              {
+                title: "Disfruta de tú vivienda",
+                description: "Una vez finalizada la construcción se finalizará el proceso de compra con la escritura de la vivienda ante notario."
+              }
+            ].map((step, index) => (
+              <div key={index} className="fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="text-4xl font-light text-[#282D15] mb-6">{index + 1}</div>
+                <h3 className="text-xl font-light mb-4">{step.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{step.description}</p>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* Context Section */}
+      <section 
+        className="py-32 relative"
+        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?auto=format&fit=crop&q=80")' }}
+      >
+        <div className="absolute inset-0 bg-[#282D15]/90" />
+        <div className="container mx-auto px-8 text-center max-w-4xl relative z-10">
+          <p className="text-xl font-light mb-16 text-[#F3F4F5]">
+            En Nestra, creemos que la vivienda no debe ser un lujo, sino una necesidad al alcance de todos. Por eso, trabajamos para aliviar esta crisis, ofreciendo un modelo escalable y eficiente que combina innovación y experiencia.
+          </p>
+          <h1 className="text-4xl font-light mb-8 text-[#F3F4F5]">
+            Construimos la vivienda que estás buscando
+          </h1>
+          <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-none px-8">
+            Empezar
+          </Button>
         </div>
       </section>
 

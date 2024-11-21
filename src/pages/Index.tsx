@@ -14,7 +14,7 @@ const Index = () => {
       {/* Hero Section */}
       <section 
         className="min-h-[90vh] flex items-center justify-center bg-cover bg-center relative"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1431576901776-e539bd916ba2?auto=format&fit=crop&q=80")' }}
+        style={{ backgroundImage: 'url("https://cdn.prod.website-files.com/6692e58c594a499f4044523c/66ad091740aaf14dce93e7ea_Vanilla%20Fayetteville_0306_Cam09_PS%20(2)_sm.jpg")' }}
       >
         <div className="absolute inset-0 bg-[#282D15]/60" />
         <div className="container mx-auto px-8 text-center relative z-10 text-[#F3F4F5]">

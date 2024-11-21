@@ -2,17 +2,23 @@ const SobreNosotros = () => {
   return (
     <div className="pt-20">
       {/* Team Section */}
-      <section className="py-32 bg-white">
-        <div className="container mx-auto px-8 max-w-4xl">
-          <h1 className="text-4xl font-light mb-12">El equipo</h1>
+      <section 
+        className="py-32 bg-cover bg-center relative"
+        style={{
+          backgroundImage: "url('https://cdn.prod.website-files.com/6692e58c594a499f40445212/66ab8c6fdad745166b7e71fd_AdobeStock_303841680_sm.jpg')"
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="container mx-auto px-8 max-w-4xl relative z-10">
+          <h1 className="text-4xl font-light mb-12 text-white">El equipo</h1>
           <div className="space-y-8">
-            <p className="text-xl font-light text-gray-600">
+            <p className="text-xl font-light text-white">
               En Nestra, estamos comprometidos con transformar el acceso a la vivienda, haciendo posible lo que antes parecía inalcanzable: hogares personalizados, asequibles, y sostenibles para todos.
             </p>
-            <p className="text-gray-500">
+            <p className="text-gray-200">
               Nestra surge como spin-off de la promotora BM Confort, que durante tres décadas ha promovido cientos de viviendas residenciales, ganándose la confianza de miles de familias.
             </p>
-            <p className="text-gray-500">
+            <p className="text-gray-200">
               Con un equipo con más de 30 años de experiencia en el desarrollo de proyectos inmobiliarios y creación de plataformas digitales, ofrecemos una solución única en el sector de la promoción inmobiliaria con un enfoque completamente innovador tanto en la forma de hacer como en el producto final.
             </p>
           </div>

@@ -8,6 +8,7 @@ import Footer from "./components/layout/Footer";
 import Index from "./pages/Index";
 import SobreNosotros from "./pages/SobreNosotros";
 import Proyectos from "./pages/Proyectos";
+import IniciarSesion from "./pages/IniciarSesion";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/sobre-nosotros" element={<SobreNosotros />} />
           <Route path="/proyectos" element={<Proyectos />} />
+          <Route path="/iniciar-sesion" element={<IniciarSesion />} />
         </Routes>
         <Footer />
       </BrowserRouter>

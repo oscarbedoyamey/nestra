@@ -47,12 +47,16 @@ const Navigation = () => {
           >
             Construir vivienda
           </Button>
-          <Button 
-            variant="outline"
-            className="border-[#282D15]/20 hover:bg-[#FAFAFA] rounded-full text-sm font-bold px-8"
+          <Link 
+            to="/iniciar-sesion"
           >
-            Iniciar sesión
-          </Button>
+            <Button 
+              variant="outline"
+              className="border-[#282D15]/20 hover:bg-[#FAFAFA] rounded-full text-sm font-bold px-8"
+            >
+              Iniciar sesión
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>

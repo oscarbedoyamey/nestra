@@ -33,8 +33,49 @@ const Proyectos = () => {
     <div className="pt-20">
       <section className="py-16">
         <div className="container mx-auto px-8">
-          <h1 className="text-4xl font-light mb-12">Nuestros Proyectos</h1>
+          <h1 className="text-4xl font-light mb-8">¿Qué esperar de tu futura vivienda?</h1>
           
+          <div className="prose max-w-none mb-16">
+            <p className="text-lg mb-8">
+              Nos comprometemos a que cada proyecto cumpla con altos estándares de calidad y diseño, 
+              sin comprometer el coste. Apostamos por crear hogares con un diseño de vanguardia que 
+              prioriza tanto el bienestar de los residentes como el respeto por el entorno.
+            </p>
+            
+            <p className="text-lg mb-8">
+              Además trabajamos directamente con constructores que además de la experiencia, tienen 
+              una filosofía muy similar a la nuestra, de aplicar transparencia, y de trabajar por 
+              reducir lo máximo posible el impacto medioambiental. Algunas de ellas son:
+            </p>
+            
+            <div className="flex flex-wrap gap-4 mb-12">
+              <a 
+                href="https://www.011h.com/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[#282D15] hover:text-[#282D15]/80 font-bold"
+              >
+                011h
+              </a>
+              <a 
+                href="https://woodea.es/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#282D15] hover:text-[#282D15]/80 font-bold"
+              >
+                Woodea
+              </a>
+              <a 
+                href="https://jithousing.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#282D15] hover:text-[#282D15]/80 font-bold"
+              >
+                JIT Housing
+              </a>
+            </div>
+          </div>
+
           <div className="mb-8">
             <Input
               type="file"

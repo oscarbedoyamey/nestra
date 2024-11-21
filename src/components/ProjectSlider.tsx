@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -5,14 +6,42 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useEmblaCarousel } from "embla-carousel-react";
 
 interface ProjectSliderProps {
   images: string[];
 }
 
 const ProjectSlider = ({ images }: ProjectSliderProps) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const interval = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 2000);
+
+    const onSelect = () => {
+      setCurrentIndex(emblaApi.selectedScrollSnap());
+    };
+
+    emblaApi.on("select", onSelect);
+
+    return () => {
+      clearInterval(interval);
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi]);
+
   return (
-    <Carousel className="w-full max-w-5xl mx-auto">
+    <Carousel 
+      ref={emblaRef}
+      className="w-full max-w-5xl mx-auto"
+      onMouseEnter={() => emblaApi?.stop()}
+      onMouseLeave={() => emblaApi?.start()}
+    >
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>

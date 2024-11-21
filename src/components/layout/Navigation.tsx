@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import { Menu } from "lucide-react";
+import { useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,10 +13,12 @@ import {
 
 const Navigation = () => {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: "smooth" });
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -24,6 +28,15 @@ const Navigation = () => {
           <img src="https://bmconfort.es/images/nestra_logo_dark.png" alt="Nestra" className="h-6" />
         </Link>
         
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <Menu className="h-6 w-6 text-[#282D15]" />
+        </button>
+
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-12">
           <button 
             onClick={() => scrollToSection("como_funciona")}
@@ -35,9 +48,11 @@ const Navigation = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors">
-                  Sobre nosotros
-                </NavigationMenuTrigger>
+                <Link to="/sobre-nosotros" className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors">
+                  <NavigationMenuTrigger className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors">
+                    Sobre nosotros
+                  </NavigationMenuTrigger>
+                </Link>
                 <NavigationMenuContent>
                   <div className="grid w-[200px] gap-3 p-4">
                     <Link 
@@ -81,7 +96,7 @@ const Navigation = () => {
           </button>
           <Button 
             variant="default" 
-            className="bg-[#282D15] hover:bg-[#282D15]/90 text-[#FAFAFA] rounded-full text-sm font-bold px-8"
+            className="bg-[#282D15] hover:bg-[#282D15]/90 text-white rounded-full text-sm font-bold px-8"
           >
             Construir vivienda
           </Button>
@@ -90,12 +105,64 @@ const Navigation = () => {
           >
             <Button 
               variant="outline"
-              className="border-[#282D15]/20 hover:bg-[#FAFAFA] rounded-full text-sm font-bold px-8"
+              className="border-[#282D15]/20 hover:bg-white rounded-full text-sm font-bold px-8"
             >
               Iniciar sesión
             </Button>
           </Link>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="absolute top-full left-0 right-0 bg-white border-b border-[#282D15]/10 p-4 md:hidden">
+            <div className="flex flex-col space-y-4">
+              <button 
+                onClick={() => scrollToSection("como_funciona")}
+                className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
+              >
+                ¿Cómo funciona?
+              </button>
+              <Link 
+                to="/sobre-nosotros"
+                className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Sobre nosotros
+              </Link>
+              <Link 
+                to="/proyectos"
+                className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Proyectos
+              </Link>
+              <button 
+                onClick={() => scrollToSection("contacto")}
+                className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
+              >
+                Contacto
+              </button>
+              <Button 
+                variant="default" 
+                className="bg-[#282D15] hover:bg-[#282D15]/90 text-white rounded-full text-sm font-bold px-8 w-full"
+              >
+                Construir vivienda
+              </Button>
+              <Link 
+                to="/iniciar-sesion"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="w-full"
+              >
+                <Button 
+                  variant="outline"
+                  className="border-[#282D15]/20 hover:bg-white rounded-full text-sm font-bold px-8 w-full"
+                >
+                  Iniciar sesión
+                </Button>
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

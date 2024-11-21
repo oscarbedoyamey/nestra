@@ -22,13 +22,12 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-[#F3F4F5]/90 backdrop-blur-sm z-50 border-b border-[#282D15]/10">
+    <nav className="fixed top-0 left-0 right-0 bg-[rgb(243,244,245)]/90 backdrop-blur-sm z-50 border-b border-[#282D15]/10">
       <div className="container mx-auto px-8 py-6 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img src="https://bmconfort.es/images/nestra_logo_dark.png" alt="Nestra" className="h-6" />
         </Link>
         
-        {/* Mobile Menu Button */}
         <button 
           className="md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -36,11 +35,10 @@ const Navigation = () => {
           <Menu className="h-6 w-6 text-[#282D15]" />
         </button>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-12">
           <button 
             onClick={() => scrollToSection("como_funciona")}
-            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
+            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors bg-[rgb(255,255,255)] hover:bg-[rgb(255,255,255)]"
           >
             ¿Cómo funciona?
           </button>
@@ -48,8 +46,8 @@ const Navigation = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link to="/sobre-nosotros" className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors">
-                  <NavigationMenuTrigger className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors">
+                <Link to="/sobre-nosotros" className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors bg-[rgb(255,255,255)] hover:bg-[rgb(255,255,255)]">
+                  <NavigationMenuTrigger className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors bg-[rgb(255,255,255)] hover:bg-[rgb(255,255,255)]">
                     Sobre nosotros
                   </NavigationMenuTrigger>
                 </Link>
@@ -84,13 +82,13 @@ const Navigation = () => {
 
           <Link 
             to="/proyectos"
-            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
+            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors bg-[rgb(255,255,255)] hover:bg-[rgb(255,255,255)]"
           >
             Proyectos
           </Link>
           <button 
             onClick={() => scrollToSection("contacto")}
-            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
+            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors bg-[rgb(255,255,255)] hover:bg-[rgb(255,255,255)]"
           >
             Contacto
           </button>

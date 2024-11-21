@@ -132,7 +132,7 @@ const Index = () => {
             </div>
             <div>
               <label className="block text-sm mb-2">Pregunta o dudas</label>
-              <Textarea required className="min-h-[150px] rounded-none border-[#282D15]" />
+              <Textarea required className="min-h-[150px] border-[#282D15]" />
             </div>
             <Button type="submit" className="w-full bg-[#282D15] hover:bg-[#282D15]/90 text-[#F3F4F5] rounded-full font-bold">
               Enviar mensaje

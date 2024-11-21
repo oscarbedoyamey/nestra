@@ -38,7 +38,7 @@ const Navigation = () => {
         <div className="hidden md:flex items-center space-x-12">
           <button 
             onClick={() => scrollToSection("como_funciona")}
-            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors bg-[rgb(255,255,255)] hover:bg-[rgb(255,255,255)]"
+            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
           >
             ¿Cómo funciona?
           </button>
@@ -46,8 +46,8 @@ const Navigation = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link to="/sobre-nosotros" className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors bg-[rgb(255,255,255)] hover:bg-[rgb(255,255,255)]">
-                  <NavigationMenuTrigger className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors bg-[rgb(255,255,255)] hover:bg-[rgb(255,255,255)]">
+                <Link to="/sobre-nosotros" className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors">
+                  <NavigationMenuTrigger className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors">
                     Sobre nosotros
                   </NavigationMenuTrigger>
                 </Link>
@@ -82,13 +82,13 @@ const Navigation = () => {
 
           <Link 
             to="/proyectos"
-            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors bg-[rgb(255,255,255)] hover:bg-[rgb(255,255,255)]"
+            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
           >
             Proyectos
           </Link>
           <button 
             onClick={() => scrollToSection("contacto")}
-            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors bg-[rgb(255,255,255)] hover:bg-[rgb(255,255,255)]"
+            className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
           >
             Contacto
           </button>

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <img src="https://drive.google.com/file/d/1RoUdPOvQIDZSObVuRWduU-lfnWuoGvxm/view?usp=drive_link" alt="Nestra" className="h-6 mb-8 invert" />
+            <img src="https://bmconfort.es/images/nestra%20_logo_white.png" alt="Nestra" className="h-6 mb-8" />
             <p className="text-sm text-[#F3F4F5]/70">
               C/Fray Vicente Nicolas 27, Ibiza
             </p>

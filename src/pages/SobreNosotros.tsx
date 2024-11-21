@@ -89,7 +89,7 @@ const SobreNosotros = () => {
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {/* Context Section */}
       <section 
         id="contacto" 
         className="py-32 relative"

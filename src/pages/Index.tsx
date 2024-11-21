@@ -29,11 +29,11 @@ const Index = () => {
           <h2 className="text-2xl md:text-3xl font-light mb-12 tracking-tight">
             Desarrollamos promociones de obra nueva que encajen con tus necesidades
           </h2>
-          <div className="space-y-8">
+          <div className="space-y-8 md:space-y-0">
             <h2 className="text-2xl font-light">
               Dinos dónde y cómo la quieres
             </h2>
-            <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-full font-bold">
+            <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-full font-bold mb-8 md:mb-0">
               Crea tu vivienda
             </Button>
           </div>
@@ -47,6 +47,7 @@ const Index = () => {
       >
         <div className="absolute inset-0 bg-[#F3F4F5]/95" />
         <div className="container mx-auto px-8 relative z-10">
+          <h2 className="text-3xl font-light text-center mb-16">Haz realidad tu piso en solo 6 pasos</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-12">
             {[
               {

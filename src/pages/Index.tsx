@@ -19,7 +19,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-[#282D15]/60" />
         <div className="container mx-auto px-8 text-center relative z-10 text-[#F3F4F5]">
           <img 
-            src="https://bmconfort.es/images/nestra%20_logo_white.png" 
+            src="https://bmconfort.es/images/nestra_logo_white.png" 
             alt="Nestra" 
             className="w-[400px] max-w-full px-8 mx-auto mb-20"
           />

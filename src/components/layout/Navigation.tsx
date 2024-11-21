@@ -43,13 +43,13 @@ const Navigation = () => {
           </button>
           <Button 
             variant="default" 
-            className="bg-[#282D15] hover:bg-[#282D15]/90 text-[#F3F4F5] rounded-none text-sm px-6"
+            className="bg-[#282D15] hover:bg-[#282D15]/90 text-[#FAFAFA] rounded-none text-sm px-6"
           >
             Construir vivienda
           </Button>
           <Button 
             variant="outline"
-            className="border-[#282D15]/20 hover:bg-[#282D15]/5 rounded-none text-sm px-6"
+            className="border-[#282D15]/20 hover:bg-[#FAFAFA] rounded-none text-sm px-6"
           >
             Iniciar sesión
           </Button>

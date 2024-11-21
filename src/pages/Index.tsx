@@ -71,7 +71,7 @@ const Index = () => {
               }
             ].map((step, index) => (
               <div key={index} className="fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="text-4xl font-light text-gray-300 mb-6">{index + 1}</div>
+                <div className="text-4xl font-light text-[#282D15] mb-6">{index + 1}</div>
                 <h3 className="text-xl font-light mb-4">{step.title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{step.description}</p>
               </div>

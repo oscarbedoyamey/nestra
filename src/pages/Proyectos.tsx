@@ -3,34 +3,25 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import ProjectSlider from "@/components/ProjectSlider";
-import { useState } from "react";
 
 const Proyectos = () => {
-  const [images, setImages] = useState([
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
-    "https://images.unsplash.com/photo-1600585154526-990dced4db0d"
-  ]);
+  const images = [
+    "https://bmarq.es/wp-content/uploads/2024/04/01-malvins-bma-arquitectura.jpg",
+    "https://bmarq.es/wp-content/uploads/2024/04/01-sa-figuera-bma-arquitectura.jpg",
+    "https://bmarq.es/wp-content/uploads/2024/04/01-fvn5-bma-arquitectura.jpg",
+    "https://arquitectura-madera.com/wp-content/uploads/2023/07/01_Ext-1.jpg",
+    "https://woodea.es/wp-content/uploads/2023/04/Tomas-breton_1.jpg",
+    "https://woodea.es/wp-content/uploads/2023/04/comedor_TB.jpg",
+    "https://woodea.es/wp-content/uploads/2023/04/ZubiCities_Madreselva_General_Calle.jpg"
+  ];
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Mensaje enviado correctamente");
   };
 
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImages(prev => [...prev, reader.result as string]);
-        toast.success("Imagen añadida correctamente");
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-white">
       <section className="py-16">
         <div className="container mx-auto px-8">
           <h1 className="text-4xl font-light mb-8">¿Qué esperar de tu futura vivienda?</h1>
@@ -74,15 +65,6 @@ const Proyectos = () => {
                 JIT Housing
               </a>
             </div>
-          </div>
-
-          <div className="mb-8">
-            <Input
-              type="file"
-              accept="image/*"
-              onChange={handleImageUpload}
-              className="rounded-full border-[#282D15]/20"
-            />
           </div>
           
           <ProjectSlider images={images} />

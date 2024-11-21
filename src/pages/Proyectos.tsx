@@ -22,44 +22,46 @@ const Proyectos = () => {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-8">¿Qué esperar de tu futura vivienda?</h1>
-          
-          <div className="prose max-w-none mb-12">
-            <p className="text-xl mb-6">
-              Nos comprometemos a que cada proyecto cumpla con altos estándares de calidad y diseño, sin comprometer el coste. Apostamos por crear hogares con un diseño de vanguardia que prioriza tanto el bienestar de los residentes como el respeto por el entorno.
-            </p>
-            <p>
-              Además trabajamos directamente con constructores que además de la experiencia, tienen una filosofía muy similar a la nuestra, de aplicar transparencia, y de trabajar por reducir lo máximo posible el impacto medioambiental. Algunas de ellas son:
-            </p>
-            <ul>
-              <li>
-                <a href="https://www.011h.com/" target="_blank" rel="noopener noreferrer" className="text-terra-600 hover:text-terra-700">
-                  011h
-                </a>
-              </li>
-              <li>
-                <a href="https://woodea.es/" target="_blank" rel="noopener noreferrer" className="text-terra-600 hover:text-terra-700">
-                  Woodea
-                </a>
-              </li>
-              <li>
-                <a href="https://jithousing.com/" target="_blank" rel="noopener noreferrer" className="text-terra-600 hover:text-terra-700">
-                  JIT Housing
-                </a>
-              </li>
-            </ul>
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-8">
+          <div className="max-w-4xl mb-20">
+            <h1 className="text-4xl font-light mb-12">¿Qué esperar de tu futura vivienda?</h1>
+            
+            <div className="space-y-8">
+              <p className="text-xl font-light text-gray-600">
+                Nos comprometemos a que cada proyecto cumpla con altos estándares de calidad y diseño, sin comprometer el coste. Apostamos por crear hogares con un diseño de vanguardia que prioriza tanto el bienestar de los residentes como el respeto por el entorno.
+              </p>
+              <p className="text-gray-500">
+                Además trabajamos directamente con constructores que además de la experiencia, tienen una filosofía muy similar a la nuestra, de aplicar transparencia, y de trabajar por reducir lo máximo posible el impacto medioambiental. Algunas de ellas son:
+              </p>
+              <ul className="space-y-2">
+                <li>
+                  <a href="https://www.011h.com/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-600 transition-colors">
+                    011h
+                  </a>
+                </li>
+                <li>
+                  <a href="https://woodea.es/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-600 transition-colors">
+                    Woodea
+                  </a>
+                </li>
+                <li>
+                  <a href="https://jithousing.com/" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-600 transition-colors">
+                    JIT Housing
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           
-          <div className="overflow-hidden" ref={emblaRef}>
+          <div className="overflow-hidden -mx-8" ref={emblaRef}>
             <div className="flex">
               {images.map((image, index) => (
-                <div key={index} className="flex-[0_0_100%] min-w-0 relative">
+                <div key={index} className="flex-[0_0_100%] min-w-0 relative px-8">
                   <img
                     src={image}
                     alt={`Proyecto ${index + 1}`}
-                    className="w-full h-[600px] object-cover"
+                    className="w-full h-[80vh] object-cover"
                   />
                 </div>
               ))}

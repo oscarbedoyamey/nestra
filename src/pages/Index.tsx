@@ -12,19 +12,20 @@ const Index = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-terra-50 to-terra-100">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <section className="min-h-[90vh] flex items-center justify-center bg-[url('/hero-bg.jpg')] bg-cover bg-center relative">
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="container mx-auto px-8 text-center relative z-10 text-white">
+          <h1 className="text-5xl md:text-6xl font-light mb-6 tracking-tight">
             Construimos la vivienda que estás buscando
           </h1>
-          <h2 className="text-2xl md:text-3xl text-gray-600 mb-8">
+          <h2 className="text-2xl md:text-3xl font-light mb-12 tracking-tight">
             Desarrollamos promociones de obra nueva que encajen con tus necesidades
           </h2>
           <div className="space-y-8">
-            <h2 className="text-2xl font-semibold">
+            <h2 className="text-2xl font-light">
               Dinos dónde y cómo la quieres
             </h2>
-            <Button size="lg" className="bg-terra-600 hover:bg-terra-700">
+            <Button size="lg" className="bg-white text-black hover:bg-gray-100 rounded-none px-8">
               Crea tu vivienda
             </Button>
           </div>
@@ -32,9 +33,9 @@ const Index = () => {
       </section>
 
       {/* Como Funciona Section */}
-      <section id="como_funciona" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8">
+      <section id="como_funciona" className="py-32 bg-white">
+        <div className="container mx-auto px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-12">
             {[
               {
                 title: "Qué vivienda quieres",
@@ -61,10 +62,10 @@ const Index = () => {
                 description: "Una vez finalizada la construcción se finalizará el proceso de compra con la escritura de la vivienda ante notario."
               }
             ].map((step, index) => (
-              <div key={index} className="text-center p-6 bg-terra-50 rounded-lg">
-                <div className="text-3xl font-bold text-terra-600 mb-4">{index + 1}</div>
-                <h3 className="font-semibold mb-2">{step.title}</h3>
-                <p className="text-sm text-gray-600">{step.description}</p>
+              <div key={index} className="fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="text-4xl font-light text-gray-300 mb-6">{index + 1}</div>
+                <h3 className="text-xl font-light mb-4">{step.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -72,46 +73,46 @@ const Index = () => {
       </section>
 
       {/* Context Section */}
-      <section className="py-20 bg-terra-50">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-xl mb-12 max-w-3xl mx-auto">
+      <section className="py-32 bg-gray-50">
+        <div className="container mx-auto px-8 text-center max-w-4xl">
+          <p className="text-xl font-light mb-16 text-gray-600">
             En Nestra, creemos que la vivienda no debe ser un lujo, sino una necesidad al alcance de todos. Por eso, trabajamos para aliviar esta crisis, ofreciendo un modelo escalable y eficiente que combina innovación y experiencia.
           </p>
-          <h1 className="text-4xl font-bold mb-8">
+          <h1 className="text-4xl font-light mb-8">
             Construimos la vivienda que estás buscando
           </h1>
-          <Button size="lg" className="bg-terra-600 hover:bg-terra-700">
+          <Button size="lg" className="bg-black text-white hover:bg-gray-800 rounded-none px-8">
             Empezar
           </Button>
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section id="contacto" className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-2xl">
-          <h2 className="text-3xl font-bold text-center mb-2">¿Tienes dudas?</h2>
-          <p className="text-center text-gray-600 mb-8">
+      <section id="contacto" className="py-32 bg-white">
+        <div className="container mx-auto px-8 max-w-2xl">
+          <h2 className="text-3xl font-light text-center mb-2">¿Tienes dudas?</h2>
+          <p className="text-center text-gray-500 mb-12">
             Estaremos encantados de atenderte
           </p>
           
-          <form onSubmit={handleContactSubmit} className="space-y-6">
+          <form onSubmit={handleContactSubmit} className="space-y-8">
             <div>
-              <label className="block text-sm font-medium mb-2">Nombre</label>
-              <Input required />
+              <label className="block text-sm mb-2">Nombre</label>
+              <Input required className="rounded-none" />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-2">Teléfono</label>
-              <Input type="tel" required />
+              <label className="block text-sm mb-2">Teléfono</label>
+              <Input type="tel" required className="rounded-none" />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-2">Email</label>
-              <Input type="email" required />
+              <label className="block text-sm mb-2">Email</label>
+              <Input type="email" required className="rounded-none" />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-2">Pregunta o dudas</label>
-              <Textarea required className="min-h-[150px]" />
+              <label className="block text-sm mb-2">Pregunta o dudas</label>
+              <Textarea required className="min-h-[150px] rounded-none" />
             </div>
-            <Button type="submit" className="w-full bg-terra-600 hover:bg-terra-700">
+            <Button type="submit" className="w-full bg-black hover:bg-gray-800 text-white rounded-none">
               Enviar mensaje
             </Button>
           </form>

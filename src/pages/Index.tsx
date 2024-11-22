@@ -52,27 +52,27 @@ const Index = () => {
             {[
               {
                 title: "Qué vivienda quieres",
-                description: "Danos la información de que zonas te gustaría que construyeramos una vivienda para tí, y como la querrías."
+                description: "Nos dices qué zonas te gustarían para tu nueva vivienda y como la querrías. Te diremos el precio aproximado."
               },
               {
                 title: "Agrupamos compradores",
-                description: "Nestra busca y agrupa personas que coinciden en donde y que tipo de vivienda quieren."
+                description: "Nestra busca y agrupa personas que coincidis en donde y que tipo de vivienda quereis."
               },
               {
                 title: "Buscamos un proyecto",
-                description: "Nestra busca y os presenta solares donde podríamos construir esas viviendas, así como posteriormente un proyecto de las mismas."
+                description: "Nestra busca y os presenta solares donde podríamos construir esas viviendas, así como posteriormente un proyecto. Te diremos el precio aún más aproximado."
               },
               {
                 title: "Reserva y personaliza",
-                description: "Una vez elegido el lugar y el proyecto llegará la hora de reservar la vivienda, que te dará derecho también a una personalización única de tu vivienda."
+                description: "Una vez elegido el lugar y el proyecto llegará la hora de reservar la vivienda, que te dará derecho también a la personalización de tu vivienda. Conocerás el precio final."
               },
               {
                 title: "Construimos",
-                description: "Nestra se encarga de que ese proyecto se promueva, y acabe siendo una realidad."
+                description: "Nestra se encarga de que ese proyecto se promueva con la máxima calidad y celeridad."
               },
               {
                 title: "Disfruta de tú vivienda",
-                description: "Una vez finalizada la construcción se finalizará el proceso de compra con la escritura de la vivienda ante notario."
+                description: "Una vez finalizada la construcción y la escritura de la vivienda ante notario solo quedará disfrutarla."
               }
             ].map((step, index) => (
               <div key={index} className="fade-in" style={{ animationDelay: `${index * 0.1}s` }}>

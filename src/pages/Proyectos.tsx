@@ -36,8 +36,8 @@ const Proyectos = () => {
             <p className="text-lg mb-8">
             <p class="text-lg mb-8">
               Además trabajamos directamente con constructores y arquitectos que además de la experiencia, tienen una filosofía muy similar a la nuestra. Aplicamos transparencia, trabajamos por reducir lo máximo posible el impacto medioambiental, y buscamos la mejor habitabilidad para los residentes y el entorno. Algunas de elloss son: 
-              <a href="https://www.011h.com/" target="_blank" rel="noopener noreferrer" class="text-[#282D15] hover:text-[#282D15]/80 font-bold">011h</a>, 
-              <a href="https://woodea.es/" target="_blank" rel="noopener noreferrer" class="text-[#282D15] hover:text-[#282D15]/80 font-bold">Woodea</a>, 
+              &nbsp;<a href="https://www.011h.com/" target="_blank" rel="noopener noreferrer" class="text-[#282D15] hover:text-[#282D15]/80 font-bold">011h</a>,&nbsp; 
+              <a href="https://woodea.es/" target="_blank" rel="noopener noreferrer" class="text-[#282D15] hover:text-[#282D15]/80 font-bold">Woodea</a>,&nbsp; 
               <a href="https://jithousing.com/" target="_blank" rel="noopener noreferrer" class="text-[#282D15] hover:text-[#282D15]/80 font-bold">JIT Housing</a>.</p>
             </p>
       

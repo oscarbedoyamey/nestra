@@ -27,7 +27,7 @@ const SobreNosotros = () => {
               En Nestra, estamos comprometidos con transformar el acceso a la vivienda, haciendo posible lo que antes parecía inalcanzable: hogares personalizados, asequibles, y sostenibles para todos.
             </p>
             <p className="text-gray-200">
-              Nestra surge como spin-off de la promotora BM Confort, que durante tres décadas ha promovido cientos de viviendas residenciales, ganándose la confianza de miles de familias.
+              Nestra nace de la promotora <a href="https://bmconfort.es"><b>BM Confort</b></a>, que durante tres décadas ha promovido cientos de viviendas residenciales, ganándose la confianza de miles de familias.
             </p>
             <p className="text-gray-200">
               Con un equipo con más de 30 años de experiencia en el desarrollo de proyectos inmobiliarios y creación de plataformas digitales, ofrecemos una solución única en el sector de la promoción inmobiliaria con un enfoque completamente innovador tanto en la forma de hacer como en el producto final.

@@ -27,7 +27,7 @@ const Index = () => {
             Construimos la vivienda que estás buscando
           </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-12 tracking-tight">
-            Desarrollamos promociones de obra nueva que encajen con tus necesidades
+            Agrupamos a personas como tú para construir viviendas que os encajen
           </h2>
           <div className="space-y-8 md:space-y-0">
             <h2 className="text-2xl font-light">
@@ -52,7 +52,7 @@ const Index = () => {
             {[
               {
                 title: "Qué vivienda quieres",
-                description: "Danos la información de que zonas te gustaría que construyeramos una vivienda para tí, y como la querrías, sin compromiso."
+                description: "Danos la información de que zonas te gustaría que construyeramos una vivienda para tí, y como la querrías."
               },
               {
                 title: "Agrupamos compradores",

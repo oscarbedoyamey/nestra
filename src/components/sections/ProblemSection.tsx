@@ -12,7 +12,10 @@ const ProblemCard = ({ number, title, description, backContent }: ProblemCardPro
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="relative w-full h-[300px] perspective-1000">
+    <div 
+      className="relative w-full h-[300px] perspective-1000 cursor-pointer"
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
       <div 
         className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${
           isFlipped ? 'rotate-y-180' : ''
@@ -23,24 +26,14 @@ const ProblemCard = ({ number, title, description, backContent }: ProblemCardPro
           <div className="text-4xl font-light text-[#282D15] mb-6">{number}</div>
           <h3 className="text-xl font-light mb-4">{title}</h3>
           <p className="text-sm text-gray-500 leading-relaxed font-bold mb-4">{description}</p>
-          <button 
-            onClick={() => setIsFlipped(true)}
-            className="text-2xl font-bold text-[#282D15] hover:text-[#282D15]/80 transition-colors"
-          >
-            +
-          </button>
+          <span className="text-2xl font-bold text-[#282D15]">+</span>
         </div>
         
         {/* Back of card */}
         <div className="absolute w-full h-full backface-hidden rotate-y-180">
           <Card className="w-full h-full p-6 flex flex-col justify-between">
             <p className="text-sm text-gray-500">{backContent}</p>
-            <button 
-              onClick={() => setIsFlipped(false)}
-              className="text-2xl font-bold text-[#282D15] hover:text-[#282D15]/80 transition-colors"
-            >
-              -
-            </button>
+            <span className="text-2xl font-bold text-[#282D15]">-</span>
           </Card>
         </div>
       </div>

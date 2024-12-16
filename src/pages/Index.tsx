@@ -77,7 +77,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-[#FFFFFF]/95" />
         <div className="container mx-auto px-8 relative z-10">
           <h2 className="text-3xl font-light text-center mb-16">Haz realidad tu piso en solo 4 pasos</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-5xl mx-auto mb-16">
             {[
               {
                 title: "Dinos que necesitas",
@@ -103,9 +103,11 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-full font-bold">
-            Crea tu vivienda
-          </Button>
+          <div className="text-center">
+            <Button size="lg" className="bg-[#4CAF50] text-[#8E9196] hover:bg-[#45a049] rounded-full font-bold">
+              Crea tu vivienda
+            </Button>
+          </div>
         </div>
       </section>
 

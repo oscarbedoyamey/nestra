@@ -122,7 +122,7 @@ const Index = () => {
               number={1}
               title="Dinos que necesitas"
               description="Nos dices qué zonas te gustarían para tu nueva vivienda y como la querrías."
-              backContent="Necesitaremos que cliques en 'Crear tu vivienda' para iniciar un formulario muy sencillo que nos ayudará a saber características de solares buscar, y que proyectos diseñar."
+              backContent="Necesitaremos que cliques en <a href=''>'Crear tu vivienda'</a> para iniciar un formulario muy sencillo que nos ayudará a saber características de solares buscar, y que proyectos diseñar."
             />
             <StepCard
               number={2}

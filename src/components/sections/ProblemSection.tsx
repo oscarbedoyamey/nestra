@@ -9,7 +9,6 @@ interface ProblemCardProps {
 const ProblemCard = ({ number, title, description }: ProblemCardProps) => {
   return (
     <div className="w-full">
-      <div className="text-4xl font-light text-[#282D15] mb-6">{number}</div>
       <h3 className="text-xl font-light mb-4">{title}</h3>
       <p className="text-sm text-gray-500 leading-relaxed font-bold">{description}</p>
     </div>
@@ -28,7 +27,7 @@ const ProblemSection = () => {
     },
     {
       title: "No veo el final del proceso",
-      description: "Con toda esta incertidumbre es difcil saber el tiempo que hay que invertir en el proceso de búsqueda y compra, numero de pisos a visitar, y coste final."
+      description: "Es difícil saber el tiempo a invertir en el proceso de búsqueda y compra, número de pisos a visitar, y coste final."
     }
   ];
 

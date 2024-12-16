@@ -1,5 +1,4 @@
 import ProjectCard, { Project } from "./ProjectCard";
-import ProjectCountdown from "./ProjectCountdown";
 import {
   Carousel,
   CarouselContent,
@@ -57,7 +56,6 @@ const ProjectsSection = () => {
     <section className="py-20">
       <div className="container mx-auto px-8">
         <h2 className="text-3xl font-bold mb-12 text-center">Próximos proyectos</h2>
-        <ProjectCountdown />
         <Carousel 
           ref={emblaRef}
           className="w-full"

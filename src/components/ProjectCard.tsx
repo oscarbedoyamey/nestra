@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import ProjectCountdown from "./ProjectCountdown";
 
 export type ProjectStatus = "Estudio" | "Negociación solar";
 
@@ -44,6 +45,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <CardContent className="p-6">
         <h3 className="text-xl font-bold mb-2">{project.title}</h3>
         <p className="text-sm text-gray-500 mb-4">{project.location}</p>
+        {project.status === "Estudio" && (
+          <div className="mb-4">
+            <ProjectCountdown />
+          </div>
+        )}
         <div className="grid grid-cols-2 gap-4 text-center">
           <div>
             <p className="text-sm text-gray-500">Entrega esperada</p>

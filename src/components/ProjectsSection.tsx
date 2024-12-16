@@ -73,13 +73,13 @@ const ProjectsSection = () => {
         >
           <CarouselContent>
             {projects.map((project, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem style="border-radius: 5%;" key={index} className="md:basis-1/2 lg:basis-1/3">
                 <ProjectCard project={project} />
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="rounded-full font-bold" />
-          <CarouselNext className="rounded-full font-bold" />
+          <CarouselPrevious style="border-radius: 5%;" className="rounded-full font-bold" />
+          <CarouselNext style="border-radius: 5%;" className="rounded-full font-bold" />
         </Carousel>
       </div>
     </section>

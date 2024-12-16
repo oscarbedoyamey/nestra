@@ -10,7 +10,6 @@ const Index = () => {
     toast.success("Mensaje enviado correctamente");
   };
 
-  const newLocal = "Iremos presentando proyectos que te puedan encajar. Cuando encuentres el proyeto y vivienda que te encajen la podrás reservar via un contrato de reserva y un pequeño pago.";
   return (
     <div className="pt-20">
       {/* Hero Section */}
@@ -42,7 +41,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-20 bg-[#F3F4F5]">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-12">

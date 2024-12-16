@@ -121,7 +121,7 @@ const Navigation = () => {
             variant="default" 
             className="bg-[#282D15] hover:bg-[#282D15]/90 text-[rgb(255,255,255)] rounded-full text-sm font-bold px-8"
           >
-            Construir vivienda
+            Crea tu vivienda
           </Button>
           <Link 
             to="/iniciar-sesion"
@@ -170,7 +170,7 @@ const Navigation = () => {
                 variant="default" 
                 className="bg-[#282D15] hover:bg-[#282D15]/90 text-[rgb(255,255,255)] rounded-full text-sm font-bold px-8 w-full"
               >
-                Construir vivienda
+                Crea tu vivienda
               </Button>
               <Link 
                 to="/iniciar-sesion"

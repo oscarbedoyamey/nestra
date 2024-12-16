@@ -1,42 +1,17 @@
-import { useState } from 'react';
 import { Card } from "@/components/ui/card";
 
 interface ProblemCardProps {
   number: number;
   title: string;
   description: string;
-  backContent: string;
 }
 
-const ProblemCard = ({ number, title, description, backContent }: ProblemCardProps) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
+const ProblemCard = ({ number, title, description }: ProblemCardProps) => {
   return (
-    <div 
-      className="relative w-full h-[300px] perspective-1000 cursor-pointer"
-      onClick={() => setIsFlipped(!isFlipped)}
-    >
-      <div 
-        className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${
-          isFlipped ? 'rotate-y-180' : ''
-        }`}
-      >
-        {/* Front of card */}
-        <div className="absolute w-full h-full backface-hidden">
-          <div className="text-4xl font-light text-[#282D15] mb-6">{number}</div>
-          <h3 className="text-xl font-light mb-4">{title}</h3>
-          <p className="text-sm text-gray-500 leading-relaxed font-bold mb-4">{description}</p>
-          <span className="text-2xl font-bold text-[#282D15]">+</span>
-        </div>
-        
-        {/* Back of card */}
-        <div className="absolute w-full h-full backface-hidden rotate-y-180">
-          <Card className="w-full h-full p-6 flex flex-col justify-between">
-            <p className="text-sm text-gray-500">{backContent}</p>
-            <span className="text-2xl font-bold text-[#282D15]">-</span>
-          </Card>
-        </div>
-      </div>
+    <div className="w-full">
+      <div className="text-4xl font-light text-[#282D15] mb-6">{number}</div>
+      <h3 className="text-xl font-light mb-4">{title}</h3>
+      <p className="text-sm text-gray-500 leading-relaxed font-bold">{description}</p>
     </div>
   );
 };
@@ -45,18 +20,15 @@ const ProblemSection = () => {
   const problems = [
     {
       title: "Quiero comprar y no encuentro",
-      description: "En España cada año hay unas 200.000 personas más queriendo comprar pisos, que nuevos construidos",
-      backContent: "Más información sobre la escasez de vivienda en España y cómo afecta a los compradores potenciales."
+      description: "En España cada año hay unas 200.000 personas más queriendo comprar pisos, que nuevos construidos"
     },
     {
       title: "Lo que encuentro no me encajan",
-      description: "Como hay muy poca vivienda disponible, es muy poco problable que la que encuentres encaje con lo que buscas.",
-      backContent: "Detalles sobre cómo nuestro servicio personalizado ayuda a encontrar la vivienda perfecta para ti."
+      description: "Como hay muy poca vivienda disponible, es muy poco problable que la que encuentres encaje con lo que buscas."
     },
     {
       title: "No veo el final del proceso",
-      description: "Con toda esta incertidumbre es difcil saber el tiempo que hay que invertir en el proceso de búsqueda y compra, numero de pisos a visitar, y coste final.",
-      backContent: "Explicación detallada de nuestro proceso paso a paso y cómo simplificamos la compra de vivienda."
+      description: "Con toda esta incertidumbre es difcil saber el tiempo que hay que invertir en el proceso de búsqueda y compra, numero de pisos a visitar, y coste final."
     }
   ];
 
@@ -76,7 +48,6 @@ const ProblemSection = () => {
               number={index + 1}
               title={problem.title}
               description={problem.description}
-              backContent={problem.backContent}
             />
           ))}
         </div>

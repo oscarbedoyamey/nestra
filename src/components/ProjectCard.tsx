@@ -47,7 +47,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           {project.status}
         </span>
       </div>
-      <CardContent className="p-6">
+      <CardContent style="background-color:white" className="p-6">
         <h3 className="text-xl font-bold mb-2">{project.title}</h3>
         <p className="text-sm text-gray-500 mb-4">{project.location}</p>
         <div className="grid grid-cols-2 gap-4 text-center">

@@ -55,8 +55,8 @@ const Index = () => {
             </div>
           </div>
           <div className="text-sm text-[#282D15]/70 max-w-4xl mx-auto space-y-2 text-center">
-            <p>1. Entregadas por las empresas promotoras directamente relacionadas con los gestores de Nestra.</p>
-            <p>2. Experiencia sumada por los socios y empresas relacionadas con los gestores de Nestra.</p>
+            <p style="font-size:12px">1. Entregadas por las empresas promotoras directamente relacionadas con los gestores de Nestra.</p>
+            <p style="font-size:12px">2. Experiencia sumada por los socios y empresas relacionadas con los gestores de Nestra.</p>
           </div>
         </div>
       </section>
@@ -64,7 +64,7 @@ const Index = () => {
       {/* Projects Section */}
       <ProjectsSection />
 
-      {/* Como Funciona Section */}
+      {/* Problema identificado */}
       <section 
         id="como_funciona" 
         className="py-32 relative"
@@ -72,33 +72,21 @@ const Index = () => {
       >
         <div className="absolute inset-0 bg-[#F3F4F5]/95" />
         <div className="container mx-auto px-8 relative z-10">
-          <h2 className="text-3xl font-light text-center mb-16">Haz realidad tu piso en solo 6 pasos</h2>
+          <h2 className="text-3xl font-light text-center mb-16">El problema: <b>Falta de Vivienda</b></h2>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-12">
             {[
               {
-                title: "Qué vivienda quieres",
-                description: "Nos dices qué zonas te gustarían para tu nueva vivienda y como la querrías. Te diremos el precio aproximado."
+                title: "Quiero comprar y no encuentro",
+                description: "En España cada año hay unas 200.000 personas más queriendo comprar pisos, que nuevos construidos"
               },
               {
-                title: "Agrupamos compradores",
-                description: "Nestra busca y agrupa personas que coincidis en donde y que tipo de vivienda quereis."
+                title: "Lo que encuentro no me encajan",
+                description: "Como hay muy poca vivienda disponible, es muy poco problable que la que encuentres encaje con lo que buscas."
               },
               {
-                title: "Buscamos un proyecto",
-                description: "Nestra busca y os presenta solares donde podríamos construir esas viviendas, así como posteriormente un proyecto. Te diremos el precio aún más aproximado."
+                title: "No veo el final del proceso",
+                description: "Con toda esta incertidumbre es difcil saber el tiempo que hay que invertir en el proceso de búsqueda y compra, numero de pisos a visitar, y coste final."
               },
-              {
-                title: "Reserva y personaliza",
-                description: "Una vez elegido el lugar y el proyecto llegará la hora de reservar la vivienda, que te dará derecho también a la personalización de tu vivienda. Conocerás el precio final."
-              },
-              {
-                title: "Construimos",
-                description: "Nestra se encarga de que ese proyecto se promueva con la máxima calidad y celeridad."
-              },
-              {
-                title: "Disfruta de tú vivienda",
-                description: "Una vez finalizada la construcción y la escritura de la vivienda ante notario solo quedará disfrutarla."
-              }
             ].map((step, index) => (
               <div key={index} className="fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="text-4xl font-light text-[#282D15] mb-6">{index + 1}</div>
@@ -107,6 +95,47 @@ const Index = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Como Funciona Section */}
+      <section 
+        id="como_funciona" 
+        className="py-32 relative"
+        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80")' }}
+      >
+        <div className="absolute inset-0 bg-[#FFFFFF]/95" />
+        <div className="container mx-auto px-8 relative z-10">
+          <h2 className="text-3xl font-light text-center mb-16">Haz realidad tu piso en solo 6 pasos</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-12">
+            {[
+              {
+                title: "Dinos que necesitas",
+                description: "Nos dices qué zonas te gustarían para tu nueva vivienda y como la querrías."
+              },
+              {
+                title: "Creamos proyectos",
+                description: "Unimos toda la demanda que busca vivienda de obra nueva en el mismo lugar o próximos, y creamos proyectos que os puedan encajar."
+              },
+              {
+                title: "Presentamos proyectos",
+                description: "Iremos presentando proyectos que te puedan encajar. Cuando encuentres el proyeto y vivienda que te encajen la podrás reservar via un contrato de reserva y un pequeño pago."
+              },
+              {
+                title: "Construimos tu vivienda",
+                description: "Firmarás contrato compra-venta, personalizarás tu vivienda, y construiremos el edificio con tu vivienda. Informandote de todo momento del estado, y los siguientes pasos y tiempos."
+              },
+            ].map((step, index) => (
+              <div key={index} className="fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="text-4xl font-light text-[#282D15] mb-6">{index + 1}</div>
+                <h3 className="text-xl font-light mb-4">{step.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed font-bold">{step.description}</p>
+              </div>
+            ))}
+          </div>
+          <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-full font-bold">
+            Crea tu vivienda
+          </Button>
         </div>
       </section>
 

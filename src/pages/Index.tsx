@@ -37,7 +37,7 @@ const StepCard = ({ number, title, description, backContent }: StepCardProps) =>
         
         {/* Back of card */}
         <div className="absolute w-full h-full backface-hidden rotate-y-180">
-          <Card className="w-full h-full p-6 flex flex-col justify-between bg-[#F3F4F5]">
+          <Card className="w-full h-full bg-[#F3F4F5] p-6 flex flex-col justify-between">
             <p className="text-sm text-gray-500">{backContent}</p>
             <span className="text-sm font-bold text-[#282D15]">Saber -</span>
           </Card>

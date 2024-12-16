@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 
-const ProjectCountdown = () => {
+interface ProjectCountdownProps {
+  endDate: Date;
+}
+
+const ProjectCountdown = ({ endDate }: ProjectCountdownProps) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -9,13 +13,15 @@ const ProjectCountdown = () => {
   });
 
   useEffect(() => {
-    // Set end date to 30 days from now for demonstration
-    const endDate = new Date();
-    endDate.setDate(endDate.getDate() + 30);
-
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = endDate.getTime() - now;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
 
       setTimeLeft({
         days: Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -26,7 +32,7 @@ const ProjectCountdown = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [endDate]);
 
   return (
     <div className="flex gap-2 justify-center items-center text-white">

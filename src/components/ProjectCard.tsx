@@ -10,6 +10,7 @@ export interface Project {
   status: ProjectStatus;
   expectedDelivery: string;
   priceFrom: string;
+  endDate: Date;
 }
 
 interface ProjectCardProps {
@@ -33,7 +34,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <div className="relative">
         {project.status === "Estudio" && (
           <div className="absolute inset-0 bg-black/50 z-10 flex items-center justify-center">
-            <ProjectCountdown />
+            <ProjectCountdown endDate={project.endDate} />
           </div>
         )}
         <img 

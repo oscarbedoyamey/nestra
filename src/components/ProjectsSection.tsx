@@ -9,6 +9,15 @@ import {
 import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
+// Función auxiliar para generar fechas aleatorias en las próximas 3-4 semanas
+const getRandomFutureDate = () => {
+  const date = new Date();
+  const daysToAdd = Math.floor(Math.random() * (28 - 21 + 1)) + 21; // Entre 21 y 28 días
+  date.setDate(date.getDate() + daysToAdd);
+  date.setHours(13, 0, 0, 0); // Establecer a las 13:00
+  return date;
+};
+
 const projects: Project[] = [
   {
     title: "Ibiza",
@@ -16,7 +25,8 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     status: "Estudio",
     expectedDelivery: "2026",
-    priceFrom: "Por definir"
+    priceFrom: "Por definir",
+    endDate: getRandomFutureDate()
   },
   {
     title: "Barcelona",
@@ -24,7 +34,8 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     status: "Negociación solar",
     expectedDelivery: "2027",
-    priceFrom: "Por definir"
+    priceFrom: "Por definir",
+    endDate: getRandomFutureDate()
   },
   {
     title: "Madrid",
@@ -32,7 +43,8 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     status: "Estudio",
     expectedDelivery: "2027",
-    priceFrom: "Por definir"
+    priceFrom: "Por definir",
+    endDate: getRandomFutureDate()
   },
   {
     title: "Zaragoza",
@@ -40,7 +52,8 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     status: "Estudio",
     expectedDelivery: "2026",
-    priceFrom: "Por definir"
+    priceFrom: "Por definir",
+    endDate: getRandomFutureDate()
   }
 ];
 

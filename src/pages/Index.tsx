@@ -10,6 +10,7 @@ const Index = () => {
     toast.success("Mensaje enviado correctamente");
   };
 
+  const newLocal = "Iremos presentando proyectos que te puedan encajar. Cuando encuentres el proyeto y vivienda que te encajen la podrás reservar via un contrato de reserva y un pequeño pago.";
   return (
     <div className="pt-20">
       {/* Hero Section */}
@@ -106,7 +107,7 @@ const Index = () => {
       >
         <div className="absolute inset-0 bg-[#FFFFFF]/95" />
         <div className="container mx-auto px-8 relative z-10">
-          <h2 className="text-3xl font-light text-center mb-16">Haz realidad tu piso en solo 6 pasos</h2>
+          <h2 className="text-3xl font-light text-center mb-16">Haz realidad tu piso en solo 4 pasos</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-12">
             {[
               {
@@ -119,7 +120,7 @@ const Index = () => {
               },
               {
                 title: "Presentamos proyectos",
-                description: "Iremos presentando proyectos que te puedan encajar. Cuando encuentres el proyeto y vivienda que te encajen la podrás reservar via un contrato de reserva y un pequeño pago."
+                description: "Iremos presentamos proyectos. Cuando veas un edificio y vivienda que te encajen podrás reservarlo de una forma rápida y simple."
               },
               {
                 title: "Construimos tu vivienda",

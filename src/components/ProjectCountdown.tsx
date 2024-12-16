@@ -29,25 +29,25 @@ const ProjectCountdown = () => {
   }, []);
 
   return (
-    <div className="flex gap-4 justify-center items-center my-8">
+    <div className="flex gap-2 justify-center items-center text-white">
       <div className="text-center">
-        <div className="text-3xl font-bold">{timeLeft.days}</div>
-        <div className="text-sm text-gray-500">días</div>
+        <div className="text-2xl font-bold">{timeLeft.days}</div>
+        <div className="text-xs">días</div>
       </div>
-      <div className="text-2xl">:</div>
+      <div className="text-xl">:</div>
       <div className="text-center">
-        <div className="text-3xl font-bold">{timeLeft.hours}</div>
-        <div className="text-sm text-gray-500">horas</div>
+        <div className="text-2xl font-bold">{timeLeft.hours}</div>
+        <div className="text-xs">horas</div>
       </div>
-      <div className="text-2xl">:</div>
+      <div className="text-xl">:</div>
       <div className="text-center">
-        <div className="text-3xl font-bold">{timeLeft.minutes}</div>
-        <div className="text-sm text-gray-500">minutos</div>
+        <div className="text-2xl font-bold">{timeLeft.minutes}</div>
+        <div className="text-xs">minutos</div>
       </div>
-      <div className="text-2xl">:</div>
+      <div className="text-xl">:</div>
       <div className="text-center">
-        <div className="text-3xl font-bold">{timeLeft.seconds}</div>
-        <div className="text-sm text-gray-500">segundos</div>
+        <div className="text-2xl font-bold">{timeLeft.seconds}</div>
+        <div className="text-xs">segundos</div>
       </div>
     </div>
   );

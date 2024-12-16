@@ -31,13 +31,18 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <Card className="overflow-hidden border border-gray-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div className="relative">
+        {project.status === "Estudio" && (
+          <div className="absolute inset-0 bg-black/50 z-10 flex items-center justify-center">
+            <ProjectCountdown />
+          </div>
+        )}
         <img 
           src={project.image} 
           alt={project.title} 
           className="w-full h-48 object-cover"
         />
         <span 
-          className={`absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(project.status)}`}
+          className={`absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-medium z-20 ${getStatusColor(project.status)}`}
         >
           {project.status}
         </span>
@@ -45,11 +50,6 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <CardContent className="p-6">
         <h3 className="text-xl font-bold mb-2">{project.title}</h3>
         <p className="text-sm text-gray-500 mb-4">{project.location}</p>
-        {project.status === "Estudio" && (
-          <div className="mb-4">
-            <ProjectCountdown />
-          </div>
-        )}
         <div className="grid grid-cols-2 gap-4 text-center">
           <div>
             <p className="text-sm text-gray-500">Entrega esperada</p>

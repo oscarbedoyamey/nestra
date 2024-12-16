@@ -11,29 +11,38 @@ import useEmblaCarousel from "embla-carousel-react";
 
 const projects: Project[] = [
   {
-    title: "Residencial Los Álamos",
-    location: "Madrid",
+    title: "Ibiza",
+    location: "",
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     status: "Estudio",
     expectedDelivery: "2026",
     priceFrom: "Por definir"
   },
   {
-    title: "Torres del Valle",
-    location: "Barcelona",
+    title: "Barcelona",
+    location: "",
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     status: "Negociación solar",
-    expectedDelivery: "2026",
+    expectedDelivery: "2027",
     priceFrom: "Por definir"
   },
   {
-    title: "Jardines de Costa",
-    location: "Valencia",
+    title: "Madrid",
+    location: "",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    status: "Estudio",
+    expectedDelivery: "2027",
+    priceFrom: "Por definir"
+  },
+  {
+    title: "Zaragoza",
+    location: "",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
     status: "Estudio",
     expectedDelivery: "2026",
     priceFrom: "Por definir"
   }
+
 ];
 
 const ProjectsSection = () => {

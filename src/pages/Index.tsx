@@ -2,70 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import useEmblaCarousel from "embla-carousel-react";
-import { useEffect, useState } from "react";
+import ProjectsSection from "@/components/ProjectsSection";
 
 const Index = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const [autoplay, setAutoplay] = useState(true);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    const interval = setInterval(() => {
-      if (autoplay) {
-        emblaApi.scrollNext();
-      }
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [emblaApi, autoplay]);
-
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Mensaje enviado correctamente");
   };
-
-  const projects = [
-    {
-      title: "Residencial Los Álamos",
-      location: "Madrid",
-      image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      stats: {
-        rentabilidad: "8,00%",
-        plazo: "24 meses",
-        inversion: "750.000€"
-      }
-    },
-    {
-      title: "Torres del Valle",
-      location: "Barcelona",
-      image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      stats: {
-        rentabilidad: "7,50%",
-        plazo: "18 meses",
-        inversion: "500.000€"
-      }
-    },
-    {
-      title: "Jardines de Costa",
-      location: "Valencia",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      stats: {
-        rentabilidad: "9,00%",
-        plazo: "30 meses",
-        inversion: "1.000.000€"
-      }
-    }
-  ];
 
   return (
     <div className="pt-20">
@@ -118,52 +61,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Próximos Proyectos Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">Próximos proyectos</h2>
-          <Carousel 
-            ref={emblaRef}
-            className="w-full"
-            onMouseEnter={() => setAutoplay(false)}
-            onMouseLeave={() => setAutoplay(true)}
-          >
-            <CarouselContent>
-              {projects.map((project, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <Card className="overflow-hidden border border-gray-100 shadow-lg hover:shadow-xl transition-shadow duration-300 mx-2">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-48 object-cover"
-                    />
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                      <p className="text-sm text-gray-500 mb-4">{project.location}</p>
-                      <div className="grid grid-cols-3 gap-4 text-center">
-                        <div>
-                          <p className="text-sm text-gray-500">Rentabilidad</p>
-                          <p className="font-bold">{project.stats.rentabilidad}</p>
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-500">Plazo</p>
-                          <p className="font-bold">{project.stats.plazo}</p>
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-500">Inversión</p>
-                          <p className="font-bold">{project.stats.inversion}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="rounded-full font-bold" />
-            <CarouselNext className="rounded-full font-bold" />
-          </Carousel>
-        </div>
-      </section>
+      {/* Projects Section */}
+      <ProjectsSection />
 
       {/* Como Funciona Section */}
       <section 

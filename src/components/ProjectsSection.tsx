@@ -42,7 +42,6 @@ const projects: Project[] = [
     expectedDelivery: "2026",
     priceFrom: "Por definir"
   }
-
 ];
 
 const ProjectsSection = () => {
@@ -73,13 +72,16 @@ const ProjectsSection = () => {
         >
           <CarouselContent>
             {projects.map((project, index) => (
-              <CarouselItem style="border-radius: 5%;" key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem 
+                key={index} 
+                className="md:basis-1/2 lg:basis-1/3 rounded-[5%]"
+              >
                 <ProjectCard project={project} />
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious style="border-radius: 5%;" className="rounded-full font-bold" />
-          <CarouselNext style="border-radius: 5%;" className="rounded-full font-bold" />
+          <CarouselPrevious className="rounded-full font-bold" />
+          <CarouselNext className="rounded-full font-bold" />
         </Carousel>
       </div>
     </section>

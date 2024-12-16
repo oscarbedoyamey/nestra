@@ -32,14 +32,14 @@ const StepCard = ({ number, title, description, backContent }: StepCardProps) =>
           <div className="text-4xl font-light text-[#282D15] mb-6">{number}</div>
           <h3 className="text-xl font-light mb-4">{title}</h3>
           <p className="text-sm text-gray-500 leading-relaxed font-bold mb-4">{description}</p>
-          <span className="text-2xl font-bold text-[#282D15]">+ Saber +</span>
+          <span className="text-sm font-bold text-[#282D15]">Saber +</span>
         </div>
         
         {/* Back of card */}
-        <div className="absolute w-full h-full backface-hidden rotate-y-180">
+        <div className="absolute w-full h-full backface-hidden rotate-y-180 bg-[#F3F4F5]">
           <Card className="w-full h-full p-6 flex flex-col justify-between">
             <p className="text-sm text-gray-500">{backContent}</p>
-            <span className="text-2xl font-bold text-[#282D15]">- Saber -</span>
+            <span className="text-sm font-bold text-[#282D15]">Saber -</span>
           </Card>
         </div>
       </div>
@@ -165,7 +165,7 @@ const Index = () => {
             Construimos la vivienda que estás buscando
           </h1>
           <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-full font-bold">
-            Empezar
+          Crea tu vivienda
           </Button>
         </div>
       </section>

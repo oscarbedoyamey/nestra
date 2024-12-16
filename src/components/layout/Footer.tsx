@@ -9,6 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-4">
             <img src="https://bmconfort.es/images/nestra_logo_white.png" alt="Nestra" className="h-6 mb-8" />
+            <Link to="/faqs" className="block text-sm text-[#F3F4F5]/70 hover:text-[#F3F4F5] transition-colors">
+              Preguntas frecuentes
+            </Link>
             <p className="text-sm text-[#F3F4F5]/70">
               C/Fray Vicente Nicolas 27, Ibiza
             </p>

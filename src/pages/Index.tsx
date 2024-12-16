@@ -54,8 +54,8 @@ const Index = () => {
             </div>
           </div>
           <div className="text-sm text-[#282D15]/70 max-w-4xl mx-auto space-y-2 text-center">
-            <p style="font-size:12px">1. Entregadas por las empresas promotoras directamente relacionadas con los gestores de Nestra.</p>
-            <p style="font-size:12px">2. Experiencia sumada por los socios y empresas relacionadas con los gestores de Nestra.</p>
+            <p className="text-xs">1. Entregadas por las empresas promotoras directamente relacionadas con los gestores de Nestra.</p>
+            <p className="text-xs">2. Experiencia sumada por los socios y empresas relacionadas con los gestores de Nestra.</p>
           </div>
         </div>
       </section>
@@ -66,7 +66,7 @@ const Index = () => {
       {/* Problema identificado */}
       <section 
         id="como_funciona" 
-        className="py-32 relative"
+        className="py-32 relative bg-cover bg-center"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80")' }}
       >
         <div className="absolute inset-0 bg-[#F3F4F5]/95" />
@@ -100,7 +100,7 @@ const Index = () => {
       {/* Como Funciona Section */}
       <section 
         id="como_funciona" 
-        className="py-32 relative"
+        className="py-32 relative bg-cover bg-center"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80")' }}
       >
         <div className="absolute inset-0 bg-[#FFFFFF]/95" />
@@ -140,7 +140,7 @@ const Index = () => {
 
       {/* Context Section */}
       <section 
-        className="py-32 relative"
+        className="py-32 relative bg-cover bg-center"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?auto=format&fit=crop&q=80")' }}
       >
         <div className="absolute inset-0 bg-[#282D15]/90" />
@@ -160,7 +160,7 @@ const Index = () => {
       {/* Contact Form Section */}
       <section 
         id="contacto" 
-        className="py-32 relative"
+        className="py-32 relative bg-cover bg-center"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&q=80")' }}
       >
         <div className="absolute inset-0 bg-[#F3F4F5]/95" />

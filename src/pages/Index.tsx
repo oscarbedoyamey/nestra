@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Index = () => {
   const handleContactSubmit = (e: React.FormEvent) => {
@@ -33,9 +34,96 @@ const Index = () => {
             <h2 className="text-2xl font-light">
               Dinos dónde y cómo la quieres
             </h2>
-            <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-full font-bold mb-8 md:mb-0">
+            <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-full font-bold">
               Crea tu vivienda
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-[#F3F4F5]">
+        <div className="container mx-auto px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-12">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold mb-4 text-[#282D15]">+1000 viviendas</h2>
+              <p className="text-xl text-[#282D15]">Entregadas <sup className="text-sm">1</sup></p>
+            </div>
+            <div className="text-center">
+              <h2 className="text-4xl font-bold mb-4 text-[#282D15]">30 años</h2>
+              <p className="text-xl text-[#282D15]">Experiencia <sup className="text-sm">2</sup></p>
+            </div>
+          </div>
+          <div className="text-sm text-[#282D15]/70 max-w-4xl mx-auto space-y-2 text-center">
+            <p>1. Entregadas por las empresas promotoras directamente relacionadas con los gestores de Nestra.</p>
+            <p>2. Experiencia sumada por los socios y empresas relacionadas con los gestores de Nestra.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Próximos Proyectos Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-8">
+          <h2 className="text-3xl font-bold mb-12 text-center">Próximos proyectos</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Residencial Los Álamos",
+                location: "Madrid",
+                image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+                stats: {
+                  rentabilidad: "8,00%",
+                  plazo: "24 meses",
+                  inversion: "750.000€"
+                }
+              },
+              {
+                title: "Torres del Valle",
+                location: "Barcelona",
+                image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+                stats: {
+                  rentabilidad: "7,50%",
+                  plazo: "18 meses",
+                  inversion: "500.000€"
+                }
+              },
+              {
+                title: "Jardines de Costa",
+                location: "Valencia",
+                image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+                stats: {
+                  rentabilidad: "9,00%",
+                  plazo: "30 meses",
+                  inversion: "1.000.000€"
+                }
+              }
+            ].map((project, index) => (
+              <Card key={index} className="overflow-hidden border-none shadow-lg">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-48 object-cover"
+                />
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-sm text-gray-500 mb-4">{project.location}</p>
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    <div>
+                      <p className="text-sm text-gray-500">Rentabilidad</p>
+                      <p className="font-bold">{project.stats.rentabilidad}</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-500">Plazo</p>
+                      <p className="font-bold">{project.stats.plazo}</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-500">Inversión</p>
+                      <p className="font-bold">{project.stats.inversion}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

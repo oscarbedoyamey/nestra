@@ -113,7 +113,7 @@ const Index = () => {
       {/* Como Funciona Section */}
       <section 
         id="como_funciona" 
-        className="py-32 bg-[#FFFFFF]"
+        className="py-32 relative bg-cover bg-center"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&q=80")' }}
       >
         <div className="container mx-auto px-8 relative z-10">

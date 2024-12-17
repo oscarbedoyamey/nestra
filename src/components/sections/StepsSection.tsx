@@ -13,11 +13,6 @@ interface StepCardProps {
 const StepCard = ({ number, title, description, backContent }: StepCardProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const formattedBackContent = backContent.replace(
-    /'Crear tu vivienda'/,
-    `<Link to="/iniciar-sesion" class="text-[#282D15] hover:underline">Crear tu vivienda</Link>`
-  );
-
   return (
     <div 
       className="relative w-full h-[300px] perspective-1000 group"

@@ -31,7 +31,7 @@ const projects: Project[] = [
   {
     title: "Barcelona",
     location: "",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "images/66ad091740aaf14dce93e7ea_Vanilla%20Fayetteville_0306_Cam09_PS%20(2)_sm-p-1080.jpg",
     status: "Negociación solar",
     expectedDelivery: "2027",
     priceFrom: "Por definir",
@@ -40,7 +40,7 @@ const projects: Project[] = [
   {
     title: "Madrid",
     location: "",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "images/670f133a54d0060dbe65290c_20241013_Facade Frontal copy-min-xs-p-1080.jpeg",
     status: "Estudio",
     expectedDelivery: "2027",
     priceFrom: "Por definir",
@@ -49,7 +49,7 @@ const projects: Project[] = [
   {
     title: "Zaragoza",
     location: "",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    image: "images/bg_descubre-mallen_3.jpg",
     status: "Estudio",
     expectedDelivery: "2026",
     priceFrom: "Por definir",

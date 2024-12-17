@@ -26,7 +26,7 @@ const projects: Project[] = [
     status: "Estudio",
     expectedDelivery: "2026",
     priceFrom: "Por definir",
-    endDate: getRandomFutureDate()
+    endDate: new Date('2025-01-15T13:00:00')
   },
   {
     title: "Barcelona",
@@ -44,7 +44,7 @@ const projects: Project[] = [
     status: "Estudio",
     expectedDelivery: "2027",
     priceFrom: "Por definir",
-    endDate: getRandomFutureDate()
+    endDate: new Date('2025-02-01T13:00:00')
   },
   {
     title: "Zaragoza",
@@ -53,7 +53,7 @@ const projects: Project[] = [
     status: "Estudio",
     expectedDelivery: "2026",
     priceFrom: "Por definir",
-    endDate: getRandomFutureDate()
+    endDate: new Date('2025-01-27T12:00:00')
   }
 ];
 

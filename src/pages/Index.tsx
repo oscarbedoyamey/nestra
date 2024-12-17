@@ -114,6 +114,7 @@ const Index = () => {
       <section 
         id="como_funciona" 
         className="py-32 bg-[#FFFFFF]"
+        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&q=80")' }}
       >
         <div className="container mx-auto px-8 relative z-10">
           <h2 className="text-3xl font-light text-center mb-16">Haz realidad tu piso en solo 4 pasos</h2>

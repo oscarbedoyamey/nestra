@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 interface StepCardProps {
   number: number;
@@ -12,10 +13,16 @@ interface StepCardProps {
 const StepCard = ({ number, title, description, backContent }: StepCardProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
+  const formattedBackContent = backContent.replace(
+    /'Crear tu vivienda'/,
+    `<Link to="/iniciar-sesion" class="text-[#282D15] hover:underline">Crear tu vivienda</Link>`
+  );
+
   return (
     <div 
-      className="relative w-full h-[300px] perspective-1000 cursor-pointer"
-      onClick={() => setIsFlipped(!isFlipped)}
+      className="relative w-full h-[300px] perspective-1000 group"
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
     >
       <div 
         className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${
@@ -34,7 +41,13 @@ const StepCard = ({ number, title, description, backContent }: StepCardProps) =>
         <div className="absolute w-full h-full backface-hidden rotate-y-180">
           <Card className="w-full h-full bg-[#F3F4F5] p-6">
             <div className="flex flex-col">
-              <p className="text-sm text-gray-500 mb-4">{backContent}</p>
+              {number === 1 ? (
+                <p className="text-sm text-gray-500 mb-4">
+                  Necesitaremos que cliques en <Link to="/iniciar-sesion" className="text-[#282D15] hover:underline">Crear tu vivienda</Link> para iniciar un formulario muy sencillo que nos ayudará a saber características de solares buscar, y que proyectos diseñar.
+                </p>
+              ) : (
+                <p className="text-sm text-gray-500 mb-4">{backContent}</p>
+              )}
               <span className="text-sm font-bold text-[#282D15]">Saber -</span>
             </div>
           </Card>

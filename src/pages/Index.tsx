@@ -116,7 +116,7 @@ const Index = () => {
         className="py-32 relative bg-cover bg-center"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&q=80")' }}
       >
-        <div className="absolute inset-0 bg-[#282D15]/90" />
+        <div className="absolute inset-0 bg-[#F3F4F5]/95" />
         <div className="container mx-auto px-8 relative z-10">
           <h2 className="text-3xl font-light text-center mb-16">Haz realidad tu piso en solo 4 pasos</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-5xl mx-auto mb-16">

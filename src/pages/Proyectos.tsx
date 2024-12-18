@@ -15,84 +15,84 @@ const Proyectos = () => {
       location: "Ibiza",
       image: "images/Optimized-lateral-fachada (1).jpg",
       deliveryDate: "2024",
-      numberOfHomes: "12"
+      numberOfHomes: 12
     },
     {
       title: "Fra Vicent Nicolau 5",
       location: "Ibiza",
       image: "images/01-fvn5-bma-arquitectura (1).jpg",
       deliveryDate: "2023",
-      numberOfHomes: "9"
+      numberOfHomes: 9
     },
     {
       title: "Cas Serras",
       location: "Ibiza",
       image: "images/01-cas-serres-bma-arquitectura.jpg",
       deliveryDate: "2021",
-      numberOfHomes: "88"
+      numberOfHomes: 88
     },
     {
       title: "Es Viver",
       location: "Ibiza",
       image: "images/figueretas-24-scaled.jpg",
       deliveryDate: "2008",
-      numberOfHomes: "11"
+      numberOfHomes: 11
     },
     {
       title: "Can Misses",
       location: "Ibiza",
       image: "images/DSC4873-scaled.jpg",
       deliveryDate: "2004",
-      numberOfHomes: "15"
+      numberOfHomes: 15
     },
     {
       title: "Fra Vicent Nicolau 27",
       location: "Ibiza",
       image: "images/DSC1783_ZOOM-scaled.jpg",
       deliveryDate: "2007",
-      numberOfHomes: "36"
+      numberOfHomes: 36
     },
     {
       title: "C/Sant Cristofol",
       location: "Ibiza",
       image: "images/DSC5264-scaled.jpg",
       deliveryDate: "2004",
-      numberOfHomes: "50"
+      numberOfHomes: 50
     },
     {
       title: "Es Palmer",
       location: "Ibiza",
       image: "images/DSC4600-copia-scaled.jpg",
       deliveryDate: "2002",
-      numberOfHomes: "87"
+      numberOfHomes: 87
     },
     {
       title: "C/Uruguay",
       location: "Puig d'en Valls",
       image: "images/DSC0711-copia-scaled.jpg",
       deliveryDate: "2000",
-      numberOfHomes: "45"
+      numberOfHomes: 45
     },
     {
       title: "Americas",
       location: "Puig d'en Valls",
       image: "images/DSC4561-scaled.jpg",
       deliveryDate: "1999",
-      numberOfHomes: "18"
+      numberOfHomes: 18
     },
     {
       title: "Aguila 18",
       location: "Jesus",
       image: "images/DSC1731-copia-ZOOM-scaled.jpg",
       deliveryDate: "2000",
-      numberOfHomes: "9"
+      numberOfHomes: 9
     },
     {
       title: "Colom 15",
       location: "Jesus",
       image: "images/DSC8775-ZOOM-scaled.jpg",
       deliveryDate: "1997",
-      numberOfHomes: "9"
+      numberOfHomes: 9
     }
   ];
 

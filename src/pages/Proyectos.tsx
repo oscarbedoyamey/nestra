@@ -68,34 +68,6 @@ const Proyectos = () => {
       image: "images/DSC4600-copia-scaled.jpg",
       deliveryDate: "2002",
       numberOfHomes: 87
-    },    
-    {
-      title: "C/Uruguay",
-      location: "Puig d'en Valls",
-      image: "images/DSC0711-copia-scaled.jpg",
-      deliveryDate: "2000",
-      numberOfHomes: 45
-    },
-    {
-      title: "Americas",
-      location: "Puig d'en Valls",
-      image: "images/DSC4561-scaled.jpg",
-      deliveryDate: "1999",
-      numberOfHomes: 18
-    },
-    {
-      title: "Aguila 18",
-      location: "Jesus",
-      image: "images/DSC1731-copia-ZOOM-scaled.jpg",
-      deliveryDate: "2000",
-      numberOfHomes: 9
-    },
-    {
-      title: "Colom 15",
-      location: "Jesus",
-      image: "images/DSC8775-ZOOM-scaled.jpg",
-      deliveryDate: "1997",
-      numberOfHomes: 9
     }
   ];
 
@@ -136,11 +108,11 @@ const Proyectos = () => {
 
       {/* Context Section */}
       <section 
-        className="py-16 relative"
+        className="py-32 relative bg-cover bg-center"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?auto=format&fit=crop&q=80")' }}
       >
         <div className="absolute inset-0 bg-[#282D15]/90" />
-        <div className="container mx-auto px-8 text-center max-w-4xl relative z-10">
+        <div className="container mx-auto px-8 text-center relative z-10">
           <p className="text-xl font-light mb-16 text-[#F3F4F5]">
             En Nestra, creemos que la vivienda no debe ser un lujo, sino una necesidad al alcance de todos. Por eso, trabajamos para aliviar esta crisis, ofreciendo un modelo escalable y eficiente que combina innovación y experiencia.
           </p>
@@ -156,7 +128,8 @@ const Proyectos = () => {
       {/* Contact Form Section */}
       <section 
         id="contacto" 
-        className="py-16 relative"
+        className="py-32 relative bg-cover bg-center"
+        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&q=80")' }}
       >
         <div className="absolute inset-0 bg-[#F3F4F5]/95" />
         <div className="container mx-auto px-8 max-w-2xl relative z-10">

@@ -68,17 +68,45 @@ const Proyectos = () => {
       image: "images/DSC4600-copia-scaled.jpg",
       deliveryDate: "2002",
       numberOfHomes: 87
+    },    
+    {
+      title: "C/Uruguay",
+      location: "Puig d'en Valls",
+      image: "images/DSC0711-copia-scaled.jpg",
+      deliveryDate: "2000",
+      numberOfHomes: 45
+    },
+    {
+      title: "Americas",
+      location: "Puig d'en Valls",
+      image: "images/DSC4561-scaled.jpg",
+      deliveryDate: "1999",
+      numberOfHomes: 18
+    },
+    {
+      title: "Aguila 18",
+      location: "Jesus",
+      image: "images/DSC1731-copia-ZOOM-scaled.jpg",
+      deliveryDate: "2000",
+      numberOfHomes: 9
+    },
+    {
+      title: "Colom 15",
+      location: "Jesus",
+      image: "images/DSC8775-ZOOM-scaled.jpg",
+      deliveryDate: "1997",
+      numberOfHomes: 9
     }
   ];
 
   return (
     <div className="pt-20 bg-white">
       {/* Bloque de introducción */}
-      <section className="py-16 bg-[#F3F4F5] relative" 
+      <section className="py-16 bg-[#F3F4F5]" 
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80")' }}
       >
         <div className="absolute inset-0 bg-[#F3F4F5]/95" />
-        <div className="container mx-auto px-8 text-center relative z-10">
+        <div className="container mx-auto px-8 text-center">
           <h1 className="text-4xl font-light mb-4">Descubre nuestros proyectos</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Nestra nace con el objetivo de dar solución al problema de falta de vivienda, uniendo la experiencia demostrada de más de 30 años, con la unión con nuevas formas de construcción que aumenta calidades y tiempos de ejecución.<br/>
@@ -108,7 +136,7 @@ const Proyectos = () => {
 
       {/* Context Section */}
       <section 
-        className="py-32 relative"
+        className="py-16 relative"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?auto=format&fit=crop&q=80")' }}
       >
         <div className="absolute inset-0 bg-[#282D15]/90" />
@@ -128,7 +156,7 @@ const Proyectos = () => {
       {/* Contact Form Section */}
       <section 
         id="contacto" 
-        className="py-32 relative"
+        className="py-16 relative"
       >
         <div className="absolute inset-0 bg-[#F3F4F5]/95" />
         <div className="container mx-auto px-8 max-w-2xl relative z-10">

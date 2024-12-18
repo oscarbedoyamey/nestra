@@ -36,7 +36,7 @@ const FinishedProjectCard = ({ project }: FinishedProjectCardProps) => {
             <p className="font-bold">{project.deliveryDate}</p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Número de viviendas</p>
+            <p className="text-sm text-gray-500">Número de unidades</p>
             <p className="font-bold">{project.numberOfHomes}</p>
           </div>
         </div>

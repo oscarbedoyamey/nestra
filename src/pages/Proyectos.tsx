@@ -11,60 +11,88 @@ const Proyectos = () => {
 
   const finishedProjects: FinishedProject[] = [
     {
-      title: "Residencial Marina",
+      title: "Sa Figuera",
       location: "Ibiza",
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
-      deliveryDate: getRandomYear().toString(),
-      numberOfHomes: getRandomHomes()
+      image: "images/Optimized-lateral-fachada (1).jpg",
+      deliveryDate: "2024",
+      numberOfHomes: "12"
     },
     {
-      title: "Vista Bella",
+      title: "Fra Vicent Nicolau 5",
       location: "Ibiza",
-      image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833",
-      deliveryDate: getRandomYear().toString(),
-      numberOfHomes: getRandomHomes()
+      image: "images/01-fvn5-bma-arquitectura (1).jpg",
+      deliveryDate: "2023",
+      numberOfHomes: "9"
     },
     {
-      title: "Puerta del Mar",
+      title: "Cas Serras",
       location: "Ibiza",
-      image: "https://images.unsplash.com/photo-1431576901776-e539bd916ba2",
-      deliveryDate: getRandomYear().toString(),
-      numberOfHomes: getRandomHomes()
+      image: "images/01-cas-serres-bma-arquitectura.jpg",
+      deliveryDate: "2021",
+      numberOfHomes: "88"
     },
     {
-      title: "Sol y Playa",
+      title: "Es Viver",
       location: "Ibiza",
-      image: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e",
-      deliveryDate: getRandomYear().toString(),
-      numberOfHomes: getRandomHomes()
+      image: "images/figueretas-24-scaled.jpg",
+      deliveryDate: "2008",
+      numberOfHomes: "11"
     },
     {
-      title: "Mediterráneo",
+      title: "Can Misses",
       location: "Ibiza",
-      image: "https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace",
-      deliveryDate: getRandomYear().toString(),
-      numberOfHomes: getRandomHomes()
+      image: "images/DSC4873-scaled.jpg",
+      deliveryDate: "2004",
+      numberOfHomes: "15"
     },
     {
-      title: "Costa Blanca",
+      title: "Fra Vicent Nicolau 27",
       location: "Ibiza",
-      image: "https://images.unsplash.com/photo-1460574283810-2aab119d8511",
-      deliveryDate: getRandomYear().toString(),
-      numberOfHomes: getRandomHomes()
+      image: "images/DSC1783_ZOOM-scaled.jpg",
+      deliveryDate: "2007",
+      numberOfHomes: "36"
     },
     {
-      title: "Cala Dorada",
+      title: "C/Sant Cristofol",
       location: "Ibiza",
-      image: "https://images.unsplash.com/photo-1486718448742-163732cd1544",
-      deliveryDate: getRandomYear().toString(),
-      numberOfHomes: getRandomHomes()
+      image: "images/DSC5264-scaled.jpg",
+      deliveryDate: "2004",
+      numberOfHomes: "50"
     },
     {
-      title: "Bahía Alta",
+      title: "Es Palmer",
       location: "Ibiza",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      deliveryDate: getRandomYear().toString(),
-      numberOfHomes: getRandomHomes()
+      image: "images/DSC4600-copia-scaled.jpg",
+      deliveryDate: "2002",
+      numberOfHomes: "87"
+    },
+    {
+      title: "C/Uruguay",
+      location: "Puig d'en Valls",
+      image: "images/DSC0711-copia-scaled.jpg",
+      deliveryDate: "2000",
+      numberOfHomes: "45"
+    },
+    {
+      title: "Americas",
+      location: "Puig d'en Valls",
+      image: "images/DSC4561-scaled.jpg",
+      deliveryDate: "1999",
+      numberOfHomes: "18"
+    },
+    {
+      title: "Aguila 18",
+      location: "Jesus",
+      image: "images/DSC1731-copia-ZOOM-scaled.jpg",
+      deliveryDate: "2000",
+      numberOfHomes: "9"
+    },
+    {
+      title: "Colom 15",
+      location: "Jesus",
+      image: "images/DSC8775-ZOOM-scaled.jpg",
+      deliveryDate: "1997",
+      numberOfHomes: "9"
     }
   ];
 
@@ -73,10 +101,10 @@ const Proyectos = () => {
       {/* Bloque de introducción */}
       <section className="py-16 bg-[#F3F4F5]">
         <div className="container mx-auto px-8 text-center">
-          <h1 className="text-4xl font-light mb-4">Nuestros proyectos</h1>
+          <h1 className="text-4xl font-light mb-4">Descubre nuestros proyectos</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Descubre nuestros proyectos actuales y pasados. Cada uno representa nuestro compromiso 
-            con la calidad, la innovación y la creación de hogares que transforman vidas.
+            Nestra nace con el objetivo de dar solución al problema de falta de vivienda, uniendo la experiencia demostrada de más de 30 años, con la unión con nuevas formas de construcción que aumenta calidades y tiempos de ejecución.<br/>
+            A continuación puedes echar un ojo al listado de nuestras promociones construidas.
           </p>
         </div>
       </section>
@@ -84,7 +112,6 @@ const Proyectos = () => {
       {/* Proyectos abiertos */}
       <section className="py-16">
         <div className="container mx-auto px-8">
-          <h2 className="text-3xl font-bold mb-12 text-center">Proyectos abiertos</h2>
           <ProjectsSection />
         </div>
       </section>

@@ -72,30 +72,30 @@ const Proyectos = () => {
     {
       title: "C/Uruguay",
       location: "Puig d'en Valls",
-      image: "images/DSC4600-copia-scaled.jpg",
-      deliveryDate: "2002",
-      numberOfHomes: 87
+      image: "images/DSC0711-copia-scaled.jpg",
+      deliveryDate: "2000",
+      numberOfHomes: 45
     },
     {
-      title: "Es Palmer",
-      location: "Ibiza",
-      image: "images/DSC4600-copia-scaled.jpg",
-      deliveryDate: "2002",
-      numberOfHomes: 87
+      title: "Americas",
+      location: "Puig d'en Valls",
+      image: "images/DSC4561-scaled.jpg",
+      deliveryDate: "1999",
+      numberOfHomes: 18
     },
     {
-      title: "Es Palmer",
-      location: "Ibiza",
-      image: "images/DSC4600-copia-scaled.jpg",
-      deliveryDate: "2002",
-      numberOfHomes: 87
+      title: "Aguila 18",
+      location: "Jesus",
+      image: "images/DSC1731-copia-ZOOM-scaled.jpg",
+      deliveryDate: "2000",
+      numberOfHomes: 9
     },
     {
-      title: "Es Palmer",
-      location: "Ibiza",
-      image: "images/DSC4600-copia-scaled.jpg",
-      deliveryDate: "2002",
-      numberOfHomes: 87
+      title: "Colom 15",
+      location: "Jesus",
+      image: "images/DSC8775-ZOOM-scaled.jpg",
+      deliveryDate: "1997",
+      numberOfHomes: 9
     }
   ];
 

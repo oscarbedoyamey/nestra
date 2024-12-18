@@ -40,7 +40,7 @@ const projects: Project[] = [
   {
     title: "Madrid",
     location: "",
-    image: "images/670f133a54d0060dbe65290c_20241013_Facade Frontalcopy-min-xs-p-1080.jpeg",
+    image: "images/670f133a54d0060dbe65290c_20241013_FacadeFrontalcopy-min-xs-p-1080.jpeg",
     status: "Estudio",
     expectedDelivery: "2027",
     priceFrom: "Por definir",

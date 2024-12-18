@@ -13,14 +13,14 @@ const Proyectos = () => {
     {
       title: "Sa Figuera",
       location: "Ibiza",
-      image: "images/Optimized-lateral-fachada (1).jpg",
+      image: "images/Optimized-lateral-fachada(1).jpg",
       deliveryDate: "2024",
       numberOfHomes: 12
     },
     {
       title: "Fra Vicent Nicolau 5",
       location: "Ibiza",
-      image: "images/01-fvn5-bma-arquitectura (1).jpg",
+      image: "images/01-fvn5-bma-arquitectura(1).jpg",
       deliveryDate: "2023",
       numberOfHomes: 9
     },

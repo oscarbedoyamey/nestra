@@ -85,7 +85,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-[#F3F4F5]">
+      <section className="py-16 bg-[#F3F4F5]">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-12">
             <div className="text-center">
@@ -155,7 +155,7 @@ const Index = () => {
 
       {/* Context Section */}
       <section 
-        className="py-32 relative bg-cover bg-center"
+        className="py-20 relative bg-cover bg-center"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?auto=format&fit=crop&q=80")' }}
       >
         <div className="absolute inset-0 bg-[#282D15]/90" />
@@ -175,7 +175,7 @@ const Index = () => {
       {/* Contact Form Section */}
       <section 
         id="contacto" 
-        className="py-32 relative bg-cover bg-center"
+        className="py-20 relative bg-cover bg-center"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&q=80")' }}
       >
         <div className="absolute inset-0 bg-[#F3F4F5]/95" />

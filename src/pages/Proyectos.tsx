@@ -68,6 +68,13 @@ const Proyectos = () => {
       image: "images/DSC4600-copia-scaled.jpg",
       deliveryDate: "2002",
       numberOfHomes: 87
+    },
+    {
+      title: "Es Palmer",
+      location: "Ibiza",
+      image: "images/DSC4600-copia-scaled.jpg",
+      deliveryDate: "2002",
+      numberOfHomes: 87
     }
   ];
 

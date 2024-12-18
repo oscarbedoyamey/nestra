@@ -71,7 +71,7 @@ const Index = () => {
             Construimos la vivienda que estás buscando
           </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-12 tracking-tight">
-            Agrupamos a personas como tú para construir viviendas que os encajen
+            Juntamos personas como tú para construir el edificio con las viviendas que os encajan
           </h2>
           <div className="space-y-8 md:space-y-0">
             <h2 className="text-2xl font-light">

@@ -109,7 +109,7 @@ const Navigation = () => {
             onClick={() => handleNavigation('/proyectos')}
             className="text-sm font-bold text-[#282D15]/70 hover:text-[#282D15] transition-colors"
           >
-            Proyectos
+            Promociones
           </Link>
           <button 
             onClick={() => scrollToSection("contacto")}

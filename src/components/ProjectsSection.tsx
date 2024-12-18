@@ -31,7 +31,7 @@ const projects: Project[] = [
   {
     title: "Barcelona",
     location: "",
-    image: "images/66ad091740aaf14dce93e7ea_Vanilla%20Fayetteville_0306_Cam09_PS%20(2)_sm-p-1080.jpg",
+    image: "images/66ad091740aaf14dce93e7ea_VanillaFayetteville_0306_Cam09_PS(2)_sm-p-1080.jpg",
     status: "Negociación solar",
     expectedDelivery: "2027",
     priceFrom: "Por definir",
@@ -40,7 +40,7 @@ const projects: Project[] = [
   {
     title: "Madrid",
     location: "",
-    image: "images/670f133a54d0060dbe65290c_20241013_Facade Frontal copy-min-xs-p-1080.jpeg",
+    image: "images/670f133a54d0060dbe65290c_20241013_Facade Frontalcopy-min-xs-p-1080.jpeg",
     status: "Estudio",
     expectedDelivery: "2027",
     priceFrom: "Por definir",

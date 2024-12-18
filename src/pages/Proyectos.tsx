@@ -102,11 +102,11 @@ const Proyectos = () => {
   return (
     <div className="pt-20 bg-white">
       {/* Bloque de introducción */}
-      <section className="py-16 bg-[#F3F4F5]" 
+      <section className="py-16 bg-[#F3F4F5] relative" 
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&q=80")' }}
       >
         <div className="absolute inset-0 bg-[#F3F4F5]/95" />
-        <div className="container mx-auto px-8 text-center">
+        <div className="container mx-auto px-8 text-center relative z-10">
           <h1 className="text-4xl font-light mb-4">Descubre nuestros proyectos</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Nestra nace con el objetivo de dar solución al problema de falta de vivienda, uniendo la experiencia demostrada de más de 30 años, con la unión con nuevas formas de construcción que aumenta calidades y tiempos de ejecución.<br/>

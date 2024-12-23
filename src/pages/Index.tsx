@@ -74,6 +74,10 @@ const Index = () => {
           <h2 className="text-2xl md:text-3xl font-light mb-12 tracking-tight">
             Juntamos personas como tú para construir el edificio con las viviendas que os encajan
           </h2>
+          
+          {/* Video Section */}
+          <VideoSection />
+          
           <div className="space-y-8 md:space-y-0">
             <h2 className="text-2xl font-light">
               Dinos dónde y cómo la quieres
@@ -82,19 +86,6 @@ const Index = () => {
               Crea tu vivienda
             </Button>
           </div>
-        </div>
-        {/* Video Section 
-        <VideoSection />
-        */}
-        
-        <div className="relative aspect-video max-w-4xl mx-auto mb-12 rounded-lg overflow-hidden shadow-xl">
-          <iframe 
-            className="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/TU_VIDEO_ID" // Reemplaza TU_VIDEO_ID con el ID de tu video
-            title="¿Cómo funciona Nestra?"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
         </div>
       </section>
 

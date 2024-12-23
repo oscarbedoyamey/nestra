@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import ProjectsSection from "@/components/ProjectsSection";
 import ProblemSection from "@/components/sections/ProblemSection";
+import VideoSection from "@/components/sections/VideoSection";
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
 
@@ -103,6 +104,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Video Section */}
+      <VideoSection />
 
       {/* Projects Section */}
       <ProjectsSection />

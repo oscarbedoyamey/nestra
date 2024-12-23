@@ -12,13 +12,15 @@ const VideoSection = () => {
         </div>
         
         <div className="relative aspect-video max-w-4xl mx-auto mb-12 rounded-lg overflow-hidden shadow-xl">
-          <iframe 
-            className="absolute inset-0 w-full h-full"
-            src="https://www.youtube.com/embed/TU_VIDEO_ID" // Reemplaza TU_VIDEO_ID con el ID de tu video
-            title="¿Cómo funciona Nestra?"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <video 
+            className="w-full h-full object-cover"
+            controls
+            preload="metadata"
+            poster="/images/video-poster.jpg" // Opcional: puedes añadir una imagen de preview
+          >
+            <source src="/videos/nestra-explainer.mp4" type="video/mp4" />
+            Tu navegador no soporta la reproducción de videos.
+          </video>
         </div>
 
         <div className="text-center">

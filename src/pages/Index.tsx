@@ -83,6 +83,19 @@ const Index = () => {
             </Button>
           </div>
         </div>
+        {/* Video Section 
+        <VideoSection />
+        */}
+        
+        <div className="relative aspect-video max-w-4xl mx-auto mb-12 rounded-lg overflow-hidden shadow-xl">
+          <iframe 
+            className="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/TU_VIDEO_ID" // Reemplaza TU_VIDEO_ID con el ID de tu video
+            title="¿Cómo funciona Nestra?"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </section>
 
       {/* Stats Section */}
@@ -104,9 +117,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Video Section */}
-      <VideoSection />
 
       {/* Projects Section */}
       <ProjectsSection />

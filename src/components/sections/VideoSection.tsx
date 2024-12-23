@@ -24,7 +24,7 @@ const VideoSection = () => {
       <video 
         className="w-full h-full object-cover rounded-lg shadow-xl"
         controls
-        preload="metadata"
+        preload="none"
         poster="/images/video-poster.jpg"
         playsInline
       >

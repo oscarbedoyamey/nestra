@@ -78,7 +78,7 @@ const Index = () => {
           {/* Video Section */}
           <VideoSection />
           
-          <div className="space-y-8 md:space-y-0">
+          <div className="space-y-8 md:space-y-0 mb-8">
             <h2 className="text-2xl font-light">
               Dinos dónde y cómo la quieres
             </h2>

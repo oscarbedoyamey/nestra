@@ -13,21 +13,27 @@ import CreaVivienda from "./pages/CreaVivienda";
 
 const queryClient = new QueryClient();
 
+const DefaultLayout = ({ children }: { children: React.ReactNode }) => (
+  <>
+    <Navigation />
+    {children}
+    <Footer />
+  </>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Navigation />
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/sobre-nosotros" element={<SobreNosotros />} />
-          <Route path="/proyectos" element={<Proyectos />} />
-          <Route path="/iniciar-sesion" element={<IniciarSesion />} />
+          <Route path="/" element={<DefaultLayout><Index /></DefaultLayout>} />
+          <Route path="/sobre-nosotros" element={<DefaultLayout><SobreNosotros /></DefaultLayout>} />
+          <Route path="/proyectos" element={<DefaultLayout><Proyectos /></DefaultLayout>} />
+          <Route path="/iniciar-sesion" element={<DefaultLayout><IniciarSesion /></DefaultLayout>} />
           <Route path="/crea-vivienda" element={<CreaVivienda />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

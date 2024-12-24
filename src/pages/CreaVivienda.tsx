@@ -6,7 +6,7 @@ const CreaVivienda = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white pt-20 flex items-center justify-center px-4">
+    <div className="h-screen w-screen">
       <iframe
         id="JotFormIFrame-243572654422053"
         title="Formulario"
@@ -15,7 +15,7 @@ const CreaVivienda = () => {
         allow="geolocation; microphone; camera; fullscreen"
         src="https://form.jotform.com/243572654422053"
         frameBorder="0"
-        className="w-full max-w-4xl h-[539px] border-none"
+        className="w-full h-full border-none"
         scrolling="no"
       />
       <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js" async />

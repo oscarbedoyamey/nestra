@@ -117,12 +117,19 @@ const Navigation = () => {
           >
             Contacto
           </button>
-          <Button 
-            variant="default" 
-            className="bg-[#282D15] hover:bg-[#282D15]/90 text-[rgb(255,255,255)] rounded-full text-sm font-bold px-8"
+          
+          <Link 
+            to="/crea-vivienda"
+            onClick={() => handleNavigation('/crea-vivienda')}
           >
-            Crea tu vivienda
-          </Button>
+            <Button 
+              variant="default" 
+              className="bg-[#282D15] hover:bg-[#282D15]/90 text-[rgb(255,255,255)] rounded-full text-sm font-bold px-8"
+            >
+              Crea tu vivienda
+            </Button>
+          </Link>
+          
           <Link 
             to="/iniciar-sesion"
             onClick={() => handleNavigation('/iniciar-sesion')}
@@ -166,12 +173,20 @@ const Navigation = () => {
               >
                 Contacto
               </button>
-              <Button 
-                variant="default" 
-                className="bg-[#282D15] hover:bg-[#282D15]/90 text-[rgb(255,255,255)] rounded-full text-sm font-bold px-8 w-full"
+              
+              <Link 
+                to="/crea-vivienda"
+                onClick={() => handleNavigation('/crea-vivienda')}
+                className="w-full"
               >
-                Crea tu vivienda
-              </Button>
+                <Button 
+                  variant="default" 
+                  className="bg-[#282D15] hover:bg-[#282D15]/90 text-[rgb(255,255,255)] rounded-full text-sm font-bold px-8 w-full"
+                >
+                  Crea tu vivienda
+                </Button>
+              </Link>
+              
               <Link 
                 to="/iniciar-sesion"
                 onClick={() => handleNavigation('/iniciar-sesion')}

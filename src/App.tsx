@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import SobreNosotros from "./pages/SobreNosotros";
 import Proyectos from "./pages/Proyectos";
 import IniciarSesion from "./pages/IniciarSesion";
+import CreaVivienda from "./pages/CreaVivienda";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/sobre-nosotros" element={<SobreNosotros />} />
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/iniciar-sesion" element={<IniciarSesion />} />
+          <Route path="/crea-vivienda" element={<CreaVivienda />} />
         </Routes>
         <Footer />
       </BrowserRouter>

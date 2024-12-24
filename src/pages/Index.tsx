@@ -7,6 +7,7 @@ import ProblemSection from "@/components/sections/ProblemSection";
 import VideoSection from "@/components/sections/VideoSection";
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface StepCardProps {
   number: number;
@@ -82,9 +83,14 @@ const Index = () => {
             <h2 className="text-2xl font-light">
               Dinos dónde y cómo la quieres
             </h2>
-            <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-full font-bold">
-              Crea tu vivienda
-            </Button>
+            <Link 
+              to="/crea-vivienda"
+              className="inline-block"
+            >
+              <Button size="lg" className="bg-[#F3F4F5] text-[#282D15] hover:bg-[#F3F4F5]/90 rounded-full font-bold">
+                Crea tu vivienda
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -129,7 +135,7 @@ const Index = () => {
               number={1}
               title="Dinos que necesitas"
               description="Nos dices qué zonas te gustarían para tu nueva vivienda y como la querrías."
-              backContent="Necesitaremos que cliques en <a href=''>'Crear tu vivienda'</a> para iniciar un formulario muy sencillo que nos ayudará a saber características de solares buscar, y que proyectos diseñar."
+              backContent="Necesitaremos que cliques en 'Crear tu vivienda' para iniciar un formulario muy sencillo que nos ayudará a saber características de solares buscar, y que proyectos diseñar."
             />
             <StepCard
               number={2}

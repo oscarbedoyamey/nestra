@@ -11,7 +11,7 @@ const CreaVivienda = () => {
         id="JotFormIFrame-243572654422053"
         title="Formulario"
         onLoad={() => window.parent.scrollTo(0, 0)}
-        allowTransparency="true"
+        allowTransparency={true}
         allow="geolocation; microphone; camera; fullscreen"
         src="https://form.jotform.com/243572654422053"
         frameBorder="0"

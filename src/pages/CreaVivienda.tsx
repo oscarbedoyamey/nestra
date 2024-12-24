@@ -12,7 +12,7 @@ const CreaVivienda = () => {
         title="Formulario"
         allowTransparency={true}
         allow="geolocation; microphone; camera; fullscreen"
-        src="https://form.jotform.com/243582523488364"
+        src="https://eu.jotform.com/form/243582523488364"
         frameBorder="0"
         className="w-full h-full border-none"
         scrolling="no"
@@ -21,7 +21,7 @@ const CreaVivienda = () => {
       <script
         dangerouslySetInnerHTML={{
           __html: `
-            window.jotformEmbedHandler("iframe[id='JotFormIFrame-243582523488364']", "https://form.jotform.com/")
+            window.jotformEmbedHandler("iframe[id='JotFormIFrame-243582523488364']", "https://eu.jotform.com/")
           `,
         }}
       />
